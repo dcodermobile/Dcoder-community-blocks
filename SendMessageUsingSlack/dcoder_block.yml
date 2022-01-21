@@ -1,0 +1,22 @@
+id: SEND_MESSAGE
+fileName: dist/index.js
+runFunction: main
+auths:
+- name: slack
+env: null
+inputs:
+- name: channel
+  type: Text
+  default: general
+  description: slack channel
+  required: true
+  title: What's the channel name?
+- name: text
+  type: Text
+  description: message to be sent
+  required: true
+  title: The text message
+output:
+  name: success
+  description: true if the message was sent successfully.
+  type: Boolean
