@@ -1,0 +1,44 @@
+id: AWS_INSTANCE_CPU_UTILISATION
+fileName: index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: instanceId
+  type: Text
+  description: Instance id of instance to be monitored.
+  required: true
+- name: startTime
+  type: Text
+  default: ${{ new Date(new Date().getTime() - 1000*60*60*24*1).toISOString() }}
+  description: Specify the start range to fetch data.
+  required: true
+- name: endTime
+  type: Text
+  default: ${{ new Date().toISOString() }}
+  description: End range to fetch the data.
+  required: true
+- name: interval
+  type: Number
+  default: 3600
+  description: interval size to fetch data.
+  required: true
+- name: region
+  type: Text
+  default: ${{ secrets.AWS_REGION }}
+  description: region in which instance is hosted. for eg- ap-southeast-1
+  required: true
+- name: awsAccessKeyId
+  type: Text
+  default: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  description: Aws access key id to authenticate.
+  required: true
+- name: awsSecretAccessKey
+  type: Text
+  default: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  description: Aws secret access key to authenticate
+  required: true
+output:
+  name: cpuUtilisationData
+  description: Cpu utilisation of instance
+  type: JsonObject
