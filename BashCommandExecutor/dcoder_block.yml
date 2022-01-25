@@ -1,0 +1,18 @@
+id: BASH_COMMAND_EXECUTER
+fileName: index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: command
+  type: Text
+  default:
+  description: bash command to execute
+  required: true
+- name: workingDirectory
+  type: Text
+  default: .
+  description: Working directory to execute code.
+  required: false
+output:
+  type:
