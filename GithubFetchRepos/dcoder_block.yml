@@ -1,0 +1,14 @@
+id: GITHUB-API-ISSUES
+fileName: dist/index.js
+runFunction: main
+auths:
+- name: github
+inputs:
+- name: username
+  type: Text
+  description: Github username or company's github username to list repos of a company.
+  required: true
+output:
+  name: repolist
+  description: List of repos an a jsonarray of repo names.
+  type: JsonArray

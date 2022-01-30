@@ -1,0 +1,16 @@
+id: UPLOADS_A_FILE_TO_DROPBOX
+fileName: dist/index.js
+runFunction: main
+auths:
+- name: dropbox
+env: null
+inputs:
+- name: filepath
+  type: Text
+  description: Full path to the file to be uploaded.
+  required: true
+  title: filepath
+output:
+  name: uploadedFilePath
+  description: The path of the uploaded file at dropbox (not the url). To get url pass this to enable link sharing.
+  type: Text

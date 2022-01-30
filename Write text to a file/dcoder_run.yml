@@ -1,0 +1,7 @@
+blocks:
+  - run: |
+      npm i
+      node index.js
+    default: true
+    id: test
+    

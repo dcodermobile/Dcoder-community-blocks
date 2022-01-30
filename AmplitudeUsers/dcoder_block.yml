@@ -1,0 +1,37 @@
+id: HTTP_GET_REQUEST_USING_AXIOS
+fileName: dist/index.js
+runFunction: main
+auths: []
+inputs:
+- name: api_key
+  type: Text
+  description: Amplitude api key, get from project details page on Amplitude.
+  required: true
+- name: api_secret
+  type: Text
+  description: Amplitude api secret, get from project details page on Amplitude.
+  required: true
+- name: start
+  type: Text
+  default: 20200410
+  description: date for start of analytics data interval.
+  required: true
+- name: end
+  type: Text
+  default: 20200411
+  description: date for end of analytics data interval.
+  required: true
+- name: m
+  type: Text
+  default: active
+  description: Optional value can be new or active.
+  required: false
+- name: i
+  type: Text
+  default: 1
+  description: Optional value can be 1, 7 or 30 for daily, weekly, and monthly respectively.
+  required: false
+output:
+  name: usersdata
+  description: Users data from Amplitude.
+  type: JsonObject

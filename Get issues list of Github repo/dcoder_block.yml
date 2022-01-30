@@ -1,0 +1,18 @@
+id: GIT_GET_ISSUES
+fileName: dist/index.js
+runFunction: main
+auths:
+- name: github
+inputs:
+- name: reponame
+  type: Text
+  description: Name of the Github repo that you want to add an issue into.
+  required: true
+- name: owner
+  type: Text
+  description: Owner is the repo owner on Github, get it from url of your Github repo.
+  required: true
+output:
+  name: issues
+  description: List of the issues as a JsonArray, you can iterate over it with iterator block.
+  type: JsonArray

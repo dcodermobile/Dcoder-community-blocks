@@ -1,0 +1,35 @@
+id: EXECUTE_ORACLE_QUERY
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: connectionString
+  type: Text
+  description: |-
+    Your Oracle db server hostname, port and dbname in given format
+    example: hostname.com:port/dbname
+
+    Make sure to whitelist Dcoder's ips to connect to your Db instance. https://code.dcoder.tech/feed/article/6055aa0f646cc60a0c9ac65e/add-dcoder-ips-to-whitelist
+  required: true
+- name: username
+  type: Text
+  description: Username for login into Mysql server.
+  required: true
+- name: password
+  type: Text
+  description: Password for login into Mysql.
+  required: true
+- name: query
+  type: Text
+  description: MySql query to be executed, can contain :q for parameters to be replaced.
+  required: true
+- name: parameters
+  type: JsonArray
+  default: ${{ [] }}
+  description: Optionally provide the value of parameters defined in query as :q as an array.
+  required: false
+output:
+  name: queryResult
+  description: The output of the query can be accessed from queryResult.data, run the block once to get dynamic output suggestions.
+  type: JsonObject

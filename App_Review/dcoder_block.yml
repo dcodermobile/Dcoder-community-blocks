@@ -1,0 +1,23 @@
+id: ANDROID_APP_REVIEW
+fileName: dist/index.js
+runFunction: main
+auths: []
+inputs:
+- name: packageName
+  type: Text
+  default: com.paprbit.dcoder
+  description: Enter the package name
+  required: true
+- name: language
+  type: Text
+  default: en
+  description: Translation language, specify with or without country I.e en, en_US,en_GB are all valid.
+  required: false
+- name: serviceAccountText
+  type: Text
+  description: Your Google service account json as text. Get it from Google api console with android publisher permissions.
+  required: true
+output:
+  name: reviews
+  description: Returns all the latest reviews
+  type: JsonObject

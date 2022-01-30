@@ -1,0 +1,38 @@
+id: CRYPTO_HISTORY_BY_DAY
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: tsym
+  type: Text
+  default: USD
+  description: 'The currency symbol to convert into, for ex: USD, INR, EUR'
+  required: false
+- name: limit
+  type: Number
+  default: 10
+  description: The number of items in result.
+  required: false
+- name: api_key
+  type: Text
+  description: Your https://cryptocompare.com API key.
+  required: true
+- name: fsym
+  type: Text
+  default: BTC
+  description: |-
+    The currency symbol of interest ex: BTC, ETH
+    Check full list on https://cryptocompare.com
+  required: false
+- name: toTs
+  type: Text
+  description: |-
+    Returns historical data before that timestamp. If you want to get all the available historical data, you can use limit=2000 and keep going back in time using the toTs param. You can then keep requesting batches using: &limit=2000&toTs={the earliest timestamp received}
+
+    Leave empty for value till current time.
+  required: false
+output:
+  name: data
+  description: Cryptocompare response data;
+  type: JsonObject

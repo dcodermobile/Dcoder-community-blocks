@@ -1,0 +1,35 @@
+id: INSERT_MONGODB_DOC
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: url
+  type: Text
+  description: Url for mongodb.
+  required: true
+- name: dbName
+  type: Text
+  description: Name of the db.
+  required: true
+- name: collectionName
+  type: Text
+  description: Name of the collection.
+  required: true
+- name: doc
+  type: JsonObject
+  default: ${{ {} }}
+  description: Mongodb doc to be inserted in collection as JsonObject
+  required: true
+- name: fieldsToBeConvertedInObjectId
+  type: Text
+  description: Comma separated list of fields those are in doc object and needs to be converted to Mongodb ObjectId for example _id
+  required: false
+- name: fieldsToBeConvertedInDate
+  type: Text
+  default:
+  description: Comma separated list of fields those are in doc object and needs to be converted to Date object for example createdAt
+  required: false
+output:
+  description:
+  type:

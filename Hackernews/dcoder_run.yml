@@ -1,0 +1,32 @@
+commands:
+- run: |-
+    npm i
+    npm i -g @vercel/ncc
+    ncc build index.js
+  default: true
+blocks:
+- name: HackerNews
+  id: HACKERNEWS
+  default: true
+  run: node dist/index.js
+  description: hacker news block
+  inputs:
+  - name: keywords
+    type: Text
+    default: null
+    description: Comma separated keywords to look for as a text
+    required: false
+    title: keywords
+  outputs:
+  - name: FEED_ITEMS
+    description: feed items
+    type: JsonArray
+    title: items
+- name: Build project
+  id: BUILD_PROJECT
+  default: false
+  run: |-
+    npm i
+    npm i -g @vercel/ncc
+    ncc build index.js -o dist
+  description: builds a single executable in dist

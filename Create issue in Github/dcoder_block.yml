@@ -1,0 +1,26 @@
+id: GITHUB_CREATE_ISSUE
+fileName: dist/index.js
+runFunction: main
+auths:
+- name: github
+inputs:
+- name: reponame
+  type: Text
+  description: Name of the Github repo that you want to add an issue into.
+  required: true
+- name: owner
+  type: Text
+  description: Owner is the repo owner on Github, get it from url of your Github repo.
+  required: true
+- name: title
+  type: Text
+  description: Enter issue title
+  required: true
+- name: body
+  type: Text
+  description: Enter issue body.
+  required: true
+output:
+  name: issue
+  description: Created issue.
+  type: JsonObject

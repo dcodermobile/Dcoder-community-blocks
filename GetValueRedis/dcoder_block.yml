@@ -1,0 +1,25 @@
+id: GET_VALUE_IN_REDIS
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: connectionUri
+  type: Text
+  description: |-
+    Connection uri for redis in format:
+
+    redis://username:authpassword@127.0.0.1:6380/4?allowUsernameInURI=true
+
+    For compatibility reasons `allowUsernameInURI` need to be provided, otherwise the username part will be ignored.
+
+    Make sure to whitelist Dcoder's ips to connect to redis instance: https://code.dcoder.tech/feed/article/6055aa0f646cc60a0c9ac65e/add-dcoder-ips-to-whitelist
+  required: true
+- name: key
+  type: Text
+  description: Key to be set.
+  required: true
+output:
+  name: value
+  description: Value of the key.
+  type: Text
