@@ -1,0 +1,15 @@
+id: UPLOAD_FILE_TO_DROPBOX
+fileName: dist/index.js
+runFunction: main
+auths:
+- name: dropbox
+env: null
+inputs:
+- name: filePath
+  type: Text
+  description: Full path to the file to be uploaded.
+  required: true
+output:
+  name: uploadedFilePath
+  description: Path of the uploaded file.
+  type: Text

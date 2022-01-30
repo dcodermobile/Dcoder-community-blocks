@@ -1,0 +1,30 @@
+id: SIGN_APK
+fileName: index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: RELEASE_DIR
+  type: Text
+  description: Enter apk release directory path
+  required: true
+- name: SIGNING_KEY_BASE_64
+  type: Text
+  description: Enter apk signing key ( base64 )
+  required: true
+- name: ALIAS
+  type: Text
+  description: Enter alias
+  required: true
+- name: KEY_PASSWORD
+  type: Text
+  description: Enter key password
+  required: true
+- name: KEY_STORE_PASSWORD
+  type: Text
+  description: Enter key store password
+  required: true
+output:
+  name: signedApkFilePath
+  description: Path of signed apk file
+  type: Text

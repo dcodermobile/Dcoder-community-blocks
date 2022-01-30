@@ -1,0 +1,6 @@
+commands:
+- run: |-
+    npm i -g @vercel/ncc
+    npm i
+    ncc build
+  default: true
