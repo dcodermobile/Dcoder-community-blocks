@@ -101,3 +101,7 @@ typings/
 
 # TernJS port file
 .tern-port
+
+# Dist files
+dist
+*/dist
