@@ -1,0 +1,42 @@
+id: GET_MONGODB_DOCS_IN_A_COLLECTION
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: url
+  type: Text
+  description: Url for mongodb.
+  required: true
+- name: dbName
+  type: Text
+  description: Name of the db.
+  required: true
+- name: collectionName
+  type: Text
+  description: Name of the collection.
+  required: true
+- name: query
+  type: JsonObject
+  default: ${{ {"_id":"5f7f5420b2b2193d5893afca"} }}
+  description: Query for filtered data as a json object.
+  required: false
+- name: update
+  type: JsonObject
+  default: ${{ {} }}
+  description: Value to be updated in doc
+  required: true
+- name: queryFieldsToBeConvertedInObjectId
+  type: Text
+  description: Comma separated list of fields those are in query and needs to be converted to Mongodb ObjectId for example _id
+  required: false
+- name: updateFieldsToBeConvertedInObjectId
+  type: Text
+  description: Comma separated list of fields those are in update and needs to be converted to Mongodb ObjectId for example _id
+  required: false
+- name: updateFieldsToBeConvertedInDate
+  type: Text
+  description: Comma separated list of fields those are in update and needs to be converted to Date object for example createdAt
+  required: false
+output:
+  type:

@@ -1,0 +1,6 @@
+commands:
+  - run: |
+      npm i
+      node index.js
+    default: true
+    

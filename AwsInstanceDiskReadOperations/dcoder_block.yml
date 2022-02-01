@@ -1,0 +1,43 @@
+id: AWS_INSTANCE_DISK_READ_OPERATIONS
+fileName: index.js
+runFunction: main
+auths: []
+inputs:
+- name: instanceId
+  type: Text
+  description: Id of AWS instance to be monitored.
+  required: true
+- name: startTime
+  type: Text
+  default: ${{ new Date(new Date().getTime() - 1000*60*60*24*1).toISOString() }}
+  description: Specify the start time to fetch data.
+  required: true
+- name: endTime
+  type: Text
+  default: ${{ new Date().toISOString() }}
+  description: Specify end time to fetch the data.
+  required: true
+- name: interval
+  type: Number
+  default: 3600
+  description: Interval in seconds to fetch data. for eg- 60 for 1 min, 300 for 5 min
+  required: true
+- name: region
+  type: Text
+  default: ${{ secrets.AWS_REGION }}
+  description: Region in which instance is hosted on aws. for eg- ap-southeast-1
+  required: true
+- name: awsAccessKeyId
+  type: Text
+  default: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  description: Aws access key id to authenticate.
+  required: true
+- name: awsSecretAccessKey
+  type: Text
+  default: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  description: Aws secret access key to authenticate.
+  required: true
+output:
+  name: diskReadData
+  description: Disk read data of instance.
+  type: JsonObject

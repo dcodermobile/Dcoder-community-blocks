@@ -1,0 +1,3 @@
+commands:
+- run: /bin/bash -c "cd apk_upload && npm i && npm i -g @vercel/ncc && ncc build upload.js -o dist"
+  default: true
