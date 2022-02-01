@@ -1,0 +1,39 @@
+id: HTTP_GET_REQUEST_USING_AXIOS
+fileName: dist/index.js
+runFunction: main
+auths: []
+inputs:
+- name: app_id
+  type: Text
+  description: |-
+    Newrelic app id.
+    Get your app id from https://rpm.newrelic.com/api/explore/applications/list
+  required: true
+- name: api_key
+  type: Text
+  description: Your newrelic api key.
+  required: true
+- name: metric_names
+  type: Text
+  description: 'Comma separated name of the metrics required. For example: HttpDispatcher'
+  required: true
+- name: value_fields
+  type: Text
+  description: Comma separated  value field names to be included in response.
+  required: false
+- name: from
+  type: Text
+  description: Isodate string from for a specific period of analytics, default is 30 min.
+  required: false
+- name: to
+  type: Text
+  description: Isodate string to for a specific period of analytics, default is 30 min.
+  required: false
+- name: period
+  type: Text
+  description: Period of timeslices in seconds.
+  required: false
+output:
+  name: metrics
+  description: newrelic metric data.
+  type: JsonObject

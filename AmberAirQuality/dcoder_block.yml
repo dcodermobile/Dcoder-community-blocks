@@ -1,0 +1,29 @@
+id: AMBEE_GET_DATA
+fileName: dist/index.js
+runFunction: main
+auths: []
+inputs:
+- name: latitude
+  type: Text
+  description: Latitutde of the location for Air quality data
+  required: true
+- name: longitude
+  type: Text
+  description: Longitude of the location for Air quality data
+  required: true
+- name: from
+  type: Text
+  description: From date in YYYY-MM-DD format.
+  required: true
+- name: to
+  type: Text
+  description: To date in YYYY-MM-DD format.
+  required: true
+- name: ambee_api_key
+  type: Text
+  description: Your https://getambee.com api key.
+  required: true
+output:
+  name: airData
+  description: Air quality data.
+  type: JsonObject

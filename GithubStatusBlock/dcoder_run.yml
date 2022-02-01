@@ -1,0 +1,49 @@
+commands:
+- run: |-
+    npm i
+    npm i -g @vercel/ncc
+    ncc build
+  default: true
+blocks:
+- name: Set GitHub commit status
+  id: SET_GITHUB_COMMIT_STATUS
+  default: true
+  run: node dist/index.js
+  description: Set a success, pending or failure status on a GitHub commit, useful for your ci/cd flows.
+  auths:
+  - name: github
+  inputs:
+  - name: repo
+    type: Text
+    default: ${{ trigger.body.repository.name }}
+    description: Name of the GitHub repo
+    required: true
+  - name: sha
+    type: Text
+    default: ${{ trigger.body.head_commit.id }}
+    description: GITHUB commit's sha or reference.
+    required: true
+  - name: status
+    type: Text
+    default: 1
+    description: Set 0 for success, 1 for pending, 2 for error/failure.
+    required: true
+  - name: owner
+    type: Text
+    default: ${{ trigger.body.repository.owner.name }}
+    description: Owner of the repo, this is not your GitHub handle but the account handle with which the repo was created.
+    required: true
+  - name: target_url
+    type: Text
+    default: https://dcoder.tech
+    description: Can add a url to commit status, will lead you to the provided link from Github commit status.
+    required: false
+  - name: description
+    type: Text
+    default: from Dcoder flows.
+    description: The description or more details about the particular status set.
+    required: false
+  outputs:
+  - name: success
+    description: Returns true if executed successfully.
+    type: Boolean

@@ -1,0 +1,22 @@
+id: AMPLITUDE_CHART_DATA
+fileName: dist/index.js
+runFunction: main
+auths: []
+inputs:
+- name: api_key
+  type: Text
+  description: Amplitude api key, get from project details page on Amplitude.
+  required: true
+- name: api_secret
+  type: Text
+  description: Amplitude api secret, get from project details page on Amplitude.
+  required: true
+- name: chart_id
+  type: Text
+  description: 'Chart id of an existing Amplitude chart from your Amplitude dashboard(
+    e.g. ''abc123'' in the following URL: https://analytics.amplitude.com/demo/chart/abc123'
+  required: true
+output:
+  name: chartdata
+  description: Chart data from Amplitude.
+  type: JsonObject

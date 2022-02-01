@@ -1,0 +1,24 @@
+id: SEND_A_MESSAGE_ON_TELEGRAM
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: token
+  type: Text
+  description: Your Telegram bot token, create using @botFather in Telegram app.
+  required: true
+  subtype: One Line
+- name: chatid
+  type: Text
+  description: The id of a public channel, make sure to make your bot an admin in this channel. if public url of the channel is t.me/chhanel-name then put @channel-name here, don't miss the @
+  required: true
+- name: message
+  type: Text
+  description: The message you want to send in the channel
+  required: true
+  subtype: Paragraph
+output:
+  name: result
+  description: data returned by the block
+  type:

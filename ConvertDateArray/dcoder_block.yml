@@ -1,0 +1,29 @@
+id: CONVERT_DATES_IN_SPECIFIC_FORMAT
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: dates
+  type: JsonArray
+  default: ${{ [] }}
+  description: Array of dates, the dates can be unix timestamp or date  iso string. If the input date is timestamp in seconds, then provide optional input isTimestampSeconds as true.
+  required: true
+- name: format
+  type: Text
+  default: MM/DD/YYYY
+  description: 'The format for the date. ex: DD/MM/YYYY HH:mm:ss'
+  required: true
+- name: timezone
+  type: Text
+  description: 'Optional timezone, ex: Asia/Calcutta or America/Los_Angeles'
+  required: false
+- name: isTimestampSeconds
+  type: Boolean
+  default: false
+  description: Provide true if input timestamp is in seconds instead of milliseconds.
+  required: false
+output:
+  name: formattedDates
+  description: Array of formatted dates.
+  type: JsonArray

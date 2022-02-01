@@ -1,0 +1,27 @@
+id: CRYPTO_PRICE
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: fsym
+  type: Text
+  default: BTC
+  description: |-
+    The currency symbol of interest ex: BTC, ETH
+    Check full list on https://cryptocompare.com
+  required: true
+- name: tsyms
+  type: Text
+  default: USD,INR,EUR
+  description: 'Comma separated list of the currency symbol to convert into, for ex:
+    USD, INR, EUR'
+  required: true
+- name: api_key
+  type: Text
+  description: Your https://cryptocompare.com API key.
+  required: true
+output:
+  name: data
+  description: Cryptocompare response data;
+  type: JsonObject

@@ -1,0 +1,14 @@
+id: LOGGER
+inputs:
+  - name: item
+    type: Text
+    description: Item to be logged.
+    required: true
+name: Logger
+description: Logs any item.
+runFunction: main
+fileName: index.js
+output:
+  name: result
+  type: null
+  description: data returned by the block

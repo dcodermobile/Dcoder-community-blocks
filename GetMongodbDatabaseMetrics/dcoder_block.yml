@@ -1,0 +1,22 @@
+id: GET_MONGODB_DATABASE_METRICS
+fileName: dist/index.js
+runFunction: main
+auths: []
+inputs:
+- name: mongo_url
+  type: Text
+  description: Mongodb url with admin db access to execute serverStatus command, ex, mongodb://user:pass@host:port/dbname?replicaSet=setname
+  required: true
+- name: database
+  type: Text
+  description: Database name for metrics.
+  required: true
+- name: scale
+  type: Number
+  default: 1
+  description: To scale storage values in output for example value 1024 here will return all stats in KB instead of bytes.
+  required: false
+output:
+  name: stats
+  description: Mongodb stats
+  type: JsonObject

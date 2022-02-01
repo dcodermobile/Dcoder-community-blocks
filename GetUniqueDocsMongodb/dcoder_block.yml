@@ -1,0 +1,31 @@
+id: GET_MONGODB_DISTINCT_DOCS
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: url
+  type: Text
+  description: Url for mongodb.
+  required: true
+- name: dbName
+  type: Text
+  description: Name of the db.
+  required: true
+- name: collectionName
+  type: Text
+  description: Name of the collection.
+  required: true
+- name: query
+  type: JsonObject
+  default: ${{ {} }}
+  description: Query for filtered data as a json object.
+  required: false
+- name: field
+  type: Text
+  description: Name of the field for which to return the distinct values.
+  required: true
+output:
+  name: distinctDocs
+  description: distinct docs.
+  type: JsonArray
