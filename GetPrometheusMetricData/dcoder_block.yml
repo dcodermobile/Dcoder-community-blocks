@@ -1,0 +1,44 @@
+id: GET_METRIC_DATA_FROM_PROMETHEUS
+fileName: index.js
+runFunction: main
+auths: []
+inputs:
+- name: prometheusServerUrl
+  type: Text
+  default: https://prometheus.dcoder.tech
+  description: Url of the prometheus server to fetch data
+  required: true
+- name: prometheusUsername
+  type: Text
+  default: ${{ secrets.PROMETHEUS_USERNAME }}
+  description: Username to access prometheus apis.
+  required: true
+- name: prometheusPassword
+  type: Text
+  default: ${{ secrets.PROMETHEUS_PASSWORD }}
+  description: Passwords to access prometheus apis.
+  required: true
+- name: query
+  type: Text
+  default: sum(kube_node_status_capacity_cpu_cores{node=~".*"})
+  description: Prometheus query to fetch data
+  required: true
+- name: startTime
+  type: Text
+  default: ${{ new Date(new Date().getTime() - (1000*60*60)).toISOString() }}
+  description: Query start time range
+  required: true
+- name: endTime
+  type: Text
+  default: ${{ new Date().toISOString() }}
+  description: Query end time range
+  required: true
+- name: step
+  type: Text
+  default: 10m
+  description: step size for data- for eg- 10s, 20m, 1h
+  required: true
+output:
+  name: response
+  description: api response of the http post call
+  type: JsonObject
