@@ -1,0 +1,30 @@
+id: UPLOAD_FILE_TO_GOOGLE_CLOUD_STORAGE
+fileName: index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: bucketName
+  type: Text
+  default:
+  description: bucket name to upload file
+  required: true
+- name: sourceFilePath
+  type: Text
+  default:
+  description: path of the file to be uploaded
+  required: true
+- name: destinationFilePath
+  type: Text
+  default:
+  description: destination file path on bucket
+  required: true
+- name: gcpKey
+  type: Text
+  default:
+  description: gcp key to upload file to cloud storage
+  required: true
+output:
+  name: result
+  description: data returned by the block
+  type:

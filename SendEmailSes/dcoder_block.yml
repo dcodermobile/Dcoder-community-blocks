@@ -1,0 +1,45 @@
+id: SEND_MAIL_USING_AMAZON_SES
+fileName: index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: SES_KEY
+  type: Text
+  default: ${{ secrets.SES_KEY }}
+  description: aws ses key
+  required: true
+- name: SES_SECRET
+  type: Text
+  default: ${{ secrets.SES_SECRET }}
+  description: aws ses secret
+  required: true
+- name: SES_REGION
+  type: Text
+  default: ${{ secrets.SES_REGION }}
+  description: aws ses region.
+  required: true
+- name: SES_SENDER
+  type: Text
+  default: Your name <youremail@example.com>
+  description: sender name and email id
+  required: true
+- name: MAIL_TO
+  type: Text
+  description: Reciever's email address.
+  required: true
+- name: MAIL_SUBJECT
+  type: Text
+  description: mail subject
+  required: true
+- name: MAIL_BODY
+  type: Text
+  description: mail body.
+  required: true
+- name: attachmentList
+  type: JsonArray
+  default: ${{ [] }}
+  description: A jsonarray of string, ie array of paths or urls of files to be attached.
+  required: false
+output:
+  type:
