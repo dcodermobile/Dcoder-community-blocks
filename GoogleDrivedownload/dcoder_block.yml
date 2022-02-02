@@ -1,0 +1,21 @@
+id: DOWNLOAD_A_FILE_FROM_GOOGLE_DRIVE
+fileName: dist/index.js
+runFunction: main
+auths:
+- name: googledrive
+inputs:
+- name: folderPath
+  type: Text
+  default: /tmp
+  description: The path of the folder where you want to download the file.
+  required: true
+- name: fileId
+  type: Text
+  description: |-
+    The fileId of a Google drive, docs or sheets file, you can get it from the url of the file.
+    It should look like: 1AzR3J_f2J0oQZhdknhf3LtECnCDksLYj
+  required: true
+output:
+  name: downloadedFilePath
+  description: The location of downloaded file.
+  type: Text

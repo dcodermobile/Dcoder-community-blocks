@@ -1,0 +1,13 @@
+id: READFILE
+auths: []
+inputs:
+  - name: path
+    type: Text
+    description: fullpath of the file to read.
+    required: true
+runFunction: main
+fileName: index.js
+output:
+  name: result
+  type: Text
+  description: data returned by the block

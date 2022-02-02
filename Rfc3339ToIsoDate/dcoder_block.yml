@@ -1,0 +1,13 @@
+id: RFC3339_FORMAT_TO_ISODATE
+fileName: dist/index.js
+runFunction: main
+auths: []
+inputs:
+- name: inputDate
+  type: Text
+  description: Provide input date.
+  required: true
+output:
+  name: convertedDate
+  description: Converted date.
+  type: Text

@@ -1,0 +1,18 @@
+id: GET_PERCENTAGE_INCREASE_OR_DECREASE
+fileName: index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: firstNumber
+  type: Number
+  description: Enter your first number.
+  required: true
+- name: secondNumber
+  type: Number
+  description: Enter your second number.
+  required: true
+output:
+  name: percentage
+  description: Percentage increament or decreament.
+  type: Number

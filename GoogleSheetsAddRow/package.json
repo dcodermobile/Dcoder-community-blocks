@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@dcodermobile/io": "^2.1.2",
+    "axios": "^0.21.1"
+  }
+}

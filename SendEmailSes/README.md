@@ -1,5 +1,5 @@
 # Send mail using amazon ses
-[![Run On Dcoder](https://static-content.dcoder.tech/dcoder-assets/run-on-dcoder.svg)](https://code.dcoder.tech/feed/block/6162a3d94b87216c6a90b488)
+[![Run On Dcoder](https://static-content.dcoder.tech/dcoder-assets/run-on-dcoder.svg)](https://code.dcoder.tech/feed/block/60c4910e0851ae7b224ac5c6)
 
 ## Description
 Send an email using amazon ses with optional attachments.

@@ -1,0 +1,23 @@
+commands:
+- run: |-
+    npm i
+    npm i -g @vercel/ncc
+    ncc build
+  default: true
+blocks:
+- name: GENERATE HTML FROM JSON
+  id: GENERATE_HTML_FROM_JSON
+  default: true
+  run: |
+    node dist/index.js
+  description: This block is used to run project.
+  inputs:
+  - name: JSON_DATA
+    type: JsonObject
+    default: ${{ {"users registered":"1000"} }}
+    required: false
+    title: JSON_DATA
+  outputs:
+  - name: HTML_TEXT
+    type: Text
+    title: Html Text

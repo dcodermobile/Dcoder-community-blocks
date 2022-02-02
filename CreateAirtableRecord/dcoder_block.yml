@@ -1,0 +1,27 @@
+id: LIST_RECORDS_FROM_AIRTABLE
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: record
+  type: JsonObject
+  default: ${{ {} }}
+  description: The record to be create as a json key value pair object.
+  required: true
+- name: base_id
+  type: Text
+  description: Airtable base_id.
+  required: true
+- name: api_key
+  type: Text
+  description: Airtable api key.
+  required: true
+- name: table
+  type: Text
+  description: Airtable table id or table name.
+  required: true
+output:
+  name: createdRecord
+  description: Airtable record.
+  type: JsonObject

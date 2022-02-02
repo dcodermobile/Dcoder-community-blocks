@@ -1,0 +1,29 @@
+id: Get_ISSUES_JIRA
+fileName: dist/index.js
+runFunction: main
+auths:
+- name: jira
+inputs:
+- name: sitename
+  type: Text
+  default: teamdcoder
+  description: Your jira site-name, as in https://site-name.atlassian.net
+  required: true
+- name: projectId
+  type: Text
+  description: Id or key of the project you want to add issues to.
+  required: true
+- name: maxResults
+  type: Number
+  default: 10
+  description: Limit the number of issues to be returned.
+  required: true
+- name: jql
+  type: Text
+  description: 'Optionally provide jql for advance search options for Jira issues.
+    more here: https://support.atlassian.com/jira-service-management-cloud/docs/use-advanced-search-with-jira-query-language-jql/'
+  required: false
+output:
+  name: issues
+  description: Issues from Jira.
+  type: JsonObject
