@@ -1,0 +1,3 @@
+commands:
+- run: "npm i \nnpm i -g @vercel/ncc\nncc build"
+  default: true

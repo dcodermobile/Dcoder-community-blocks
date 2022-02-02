@@ -1,0 +1,54 @@
+id: GET_MONGODB_DOCS_IN_A_COLLECTION
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: url
+  type: Text
+  description: Url for mongodb.
+  required: true
+- name: dbName
+  type: Text
+  description: Name of the db.
+  required: true
+- name: collectionName
+  type: Text
+  description: Name of the collection.
+  required: true
+- name: query
+  type: JsonObject
+  default: ${{ {} }}
+  description: Query for filtered data as a json object.
+  required: false
+- name: skip
+  type: Number
+  description: How many results to skip from mongo cursor, default is no skip.
+  required: false
+- name: limit
+  type: Number
+  description: to limit the documents in output.
+  required: false
+- name: fieldsToBeConvertedInObjectId
+  type: Text
+  default:
+  description: Comma separated list of fields those are in query and needs to be converted to Mongodb ObjectId for example _id or _id.$in
+  required: false
+- name: sort
+  type: JsonObject
+  default: ${{ {} }}
+  description: 'A json object to sort the results. can be key value like { "createdAt":
+    -1 }'
+  required: false
+- name: select
+  type: JsonObject
+  default: ${{ {} }}
+  description: |-
+    Key value pair as a JsonObject for the fields. Use 1 or true to keep a field, and -1 or false to remove.
+    ex
+    { "username": 1, "password": -1 }
+  required: false
+output:
+  name: docs
+  description: Returned mongodb docs.
+  type: JsonArray

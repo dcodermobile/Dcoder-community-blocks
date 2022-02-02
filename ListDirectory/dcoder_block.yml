@@ -1,0 +1,13 @@
+id: LIST_DIRECTORY
+auths: []
+inputs:
+  - name: path
+    type: Text
+    description: fullpath of the directory for listing.
+    required: true
+runFunction: main
+fileName: index.js
+output:
+  name: result
+  type: JsonArray
+  description: data returned by the block

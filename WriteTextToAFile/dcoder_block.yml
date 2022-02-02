@@ -1,0 +1,33 @@
+id: WRITE_TEXT_TO_A_FILE
+inputs:
+  - name: filepath
+    type: Text
+    description: Full path to the file to be written or appended.
+    required: true
+  - name: mode
+    type: Number
+    default: 2
+    description: Choose 1 for append, 2 for write
+    required: false
+    endRange: 2
+    startRange: 1
+  - name: text
+    type: Text
+    description: Text to be written to the file.
+    required: true
+  - name: directory
+    type: Text
+    description: Optional when full filepath is not provided, you can provide the
+      directory and filename.
+    required: false
+  - name: filename
+    type: Text
+    description: Optional when full filepath is not provided, you can provide the
+      directory and filename.
+    required: false
+runFunction: main
+fileName: index.js
+output:
+  name: result
+  type: null
+  description: data returned by the block

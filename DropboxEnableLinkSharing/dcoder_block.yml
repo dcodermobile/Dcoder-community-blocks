@@ -1,0 +1,16 @@
+id: DROPBOX_ENABLE_LINK_SHARING
+fileName: dist/index.js
+runFunction: main
+auths:
+- name: dropbox
+env: null
+inputs:
+- name: filepath
+  type: Text
+  description: Path of the file on Dropbox to enable link sharing on.
+  required: true
+  title: filepath
+output:
+  name: link
+  description: https link of the file to be shared.
+  type: Text

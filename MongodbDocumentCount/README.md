@@ -1,8 +1,8 @@
-# MongoDB document count of past x days
-[![Run On Dcoder](https://static-content.dcoder.tech/dcoder-assets/run-on-dcoder.svg)](https://code.dcoder.tech/feed/block/610cb51a467526b1c08f6586)
+# MongoDB document count of past n days
+[![Run On Dcoder](https://static-content.dcoder.tech/dcoder-assets/run-on-dcoder.svg)](https://code.dcoder.tech/feed/block/6139032f477ff928c08934ee)
 
 ## Description
-This block gives the counts document of given collection of past x days.
+This block gives the counts document of given collection of past n days.
 
 ## Inputs
 #### **mongoUri**  *Text*

@@ -1,0 +1,13 @@
+commands:
+- run: |-
+    npm i
+    npm i -g @vercel/ncc
+    ncc build
+  default: true
+id: LOGGER
+run: node index.js
+inputs:
+- name: item
+  type: Text
+  description: Item to be logged.
+  required: true

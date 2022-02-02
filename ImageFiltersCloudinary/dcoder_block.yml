@@ -1,0 +1,53 @@
+id: APPLY_IMAGE_FILTERS_USING_CLOUDINARY
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: path
+  type: Text
+  description: Full path to image on disk like /tmp/abc.jpg or a public http url for image.
+  required: true
+- name: filter
+  type: Text
+  description: |-
+    A number from 1 to 21 for the desired filter.
+
+    1. al_dente,
+    2. athena,
+    3. audrey,
+    4. aurora,
+    5. daguerre,
+    6. eucalyptus,
+    7. fes,
+    8. frost,
+    9. hairspray,
+    10. hokusai,
+    11. incognito,
+    12. linen,
+    13. peacock,
+    14. primavera,
+    15. quartz,
+    16. red_rock,
+    17. refresh,
+    18. sizzle,
+    19. sonnet,
+    20. ukulele,
+    21. zorro
+  required: true
+- name: cloud_name
+  type: Text
+  description: Cloud_name , you will get this post cloudinary.com registration in their dev documentation's configure sdk section.
+  required: true
+- name: api_key
+  type: Text
+  description: Cloudinary Api key , you will get this post cloudinary.com registration in their dev documentation's configure sdk section.
+  required: true
+- name: api_secret
+  type: Text
+  description: Cloudinary Api secret , you will get this post cloudinary.com registration in their dev documentation's configure sdk section.
+  required: true
+output:
+  name: editedImageUrl
+  description: The transformed image url.
+  type: Text

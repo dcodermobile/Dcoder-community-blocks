@@ -1,0 +1,7 @@
+commands:
+- run: |-
+    # Write your command here
+    npm i mongodb -s
+    npm i -g @vercel/ncc
+    ncc build
+  default: true

@@ -1,0 +1,16 @@
+id: DELETE_A_DROPBOX_FILE
+auths:
+  - name: dropbox
+inputs:
+  - name: filepath
+    type: Text
+    description: Path of the folder or file to be deleted.
+    required: true
+default: false
+description: The block deletes files from dropbox given the path of the file.
+runFunction: main
+fileName: index.js
+output:
+  name: result
+  type: Boolean
+  description: data returned by the block

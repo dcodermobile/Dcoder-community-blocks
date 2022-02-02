@@ -1,0 +1,20 @@
+id: REMOVE_DUPLICATES
+fileName: index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: item
+  type: Text
+  description: one single article or object
+  required: true
+  value: Chair
+- name: separator
+  type: Text
+  default: ','
+  description: Separator between words
+  required: false
+output:
+  name: result
+  description: data returned by the block
+  type: Text

@@ -1,0 +1,32 @@
+id: UPDATE_AIRTABLE_RECORDS
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: id
+  type: Text
+  description: id of the record to be updated.
+  required: true
+- name: record
+  type: JsonObject
+  default: ${{ {} }}
+  description: Provide key value pair for the record as a json Object.
+  required: true
+- name: base_id
+  type: Text
+  description: Your Airtable base_id
+  required: true
+- name: table_name
+  type: Text
+  description: Your Airtable table name.
+  required: true
+- name: api_key
+  type: Text
+  default:
+  description: Your Airtable api_key.
+  required: true
+output:
+  name: updatedRecord
+  description: Updated record as a json object.
+  type: JsonObject

@@ -1,0 +1,27 @@
+id: ANDROID_APP_REVIEW_REPLY
+fileName: dist/index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: packageName
+  type: Text
+  default: com.paprbit.dcoder
+  description: Enter the package name
+  required: true
+- name: serviceAccountText
+  type: Text
+  description: Your service account json file text generated from Google api console.
+  required: true
+- name: reviewId
+  type: Text
+  description: Id of the review to reply to.
+  required: true
+- name: replyText
+  type: Text
+  description: The reply text for the review.
+  required: true
+output:
+  name: replyRespose
+  description: replyResponse from Google play.
+  type: JsonObject

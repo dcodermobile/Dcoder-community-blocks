@@ -1,0 +1,14 @@
+id: TRANSFORMS_AN_ARRAY_TO_OBJECT_WITH_KEYS_ARRAY
+fileName: index.js
+runFunction: main
+auths: []
+inputs:
+- name: arr
+  type: JsonArray
+  default: '${{ [{ "item": "Chair"}] }}'
+  description: 'Array of objects as input. ex: [ { item: Chair}, { item: table} ]'
+  required: true
+output:
+  name: transformedObject
+  description: The transformed object as output, quite useful when transforming data for graphs and charts widgets.
+  type: JsonObject
