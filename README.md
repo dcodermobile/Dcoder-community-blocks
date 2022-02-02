@@ -13,6 +13,11 @@ To know more about blocks and how to create one follow the link below.
 <a href="https://www.youtube.com/watch?v=zk24jlyDMb8"><image src="https://i.ytimg.com/vi/zk24jlyDMb8/sddefault.jpg" alternate="How to create a block?"></img></a>
 > Tap to play on Youtube
 
+To work with blocks on desktop, use our cli with your favorite editor.
+[dcoder-cli](https://www.npmjs.com/package/@dcodermobile/dcoder-cli)
+
+See out Contribution guidelines to learn more about how to create and test out a block and contribute to this repo.
+[Contribution Guidelines](https://github.com/dcodermobile/Dcoder-community-blocks/blob/main/CONTRIBUTING.md)
 
 
 [To get access to Dcoder's low code apply here.](https://bit.ly/3CZqU2a)
