@@ -21,6 +21,7 @@ make sure that you *read the whole guidelines*. If you have any doubt on the con
 - The build is created using `@vercel/ncc build` command, change the index.js to dist/index.js in filePath in dcoder_block.yml file.
 - Turn off auto install of npm modules with `dcoder-cli block update-info --auto-install-package false` as we are using a compiled single file in dist folder.
 - Add title, description and tags for your block with ```dcoder-cli block update-info --title "Your title here" --description "This is block description" --tags "tag1,tag2,tag3"```
+- Add the readme for block using `dcoder-cli block readme`
 - Give it a retest, once everything work as expected, create a version with `dcoder-cli block version:create` and enter 1.0.0 as version, we follow semantic versioning.
 - Publish the block with `dcoder-cli block publish`
 - After publishing generate a PR on original repo.
