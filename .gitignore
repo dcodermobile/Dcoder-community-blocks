@@ -101,3 +101,11 @@ typings/
 
 # TernJS port file
 .tern-port
+
+# Build files
+dist
+*/dist
+
+# Dcoder files
+.dcoder
+*/.dcoder
