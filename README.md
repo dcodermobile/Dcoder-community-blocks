@@ -1,10 +1,10 @@
 # Dcoder-community-blocks
 An open source program to contribute to Dcoder blocks, now anyone and everyone can take part in this open soruce revolution to help coding community by building blocks for Dcoder's low code editor.
 
-# Block
+## Block
 A block is a piece of code can be described as an action for example: Sending a message on Slack, Adding a row in Google sheets, deploying a website on netlify or fetching data from mongodb abstrated with it's title, description, inputs parameters and output. 
 
-# Flow
+## Flow
 Dcoder is a mobile first low code editor, you can connect the dcoder blocks together to build flows, automations and Dashboards with ui widgets.
 
 
@@ -16,6 +16,7 @@ To know more about blocks and how to create one follow the link below.
 To work with blocks on desktop, use our cli with your favorite editor.
 [Click here to access dcoder-cli](https://www.npmjs.com/package/@dcodermobile/dcoder-cli)
 
+## Contribution guidelines
 See our Contribution guidelines to learn more about how to create and test out a block and contribute to this repo.
 [Click to access Contribution Guidelines](https://github.com/dcodermobile/Dcoder-community-blocks/blob/main/CONTRIBUTING.md)
 
