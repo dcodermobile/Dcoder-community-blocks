@@ -1,0 +1,15 @@
+id: DROPBOX_CREATE_FOLDER
+fileName: dist/index.js
+runFunction: main
+auths:
+- name: dropbox
+env: null
+inputs:
+- name: folderPath
+  type: Text
+  description: Give the path (name of the folder /<folderPath>) of the folder on Dropbox.
+  required: true
+output:
+  name: response
+  description: Response from dropbox.
+  type: JsonObject
