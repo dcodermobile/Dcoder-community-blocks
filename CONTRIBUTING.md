@@ -12,7 +12,7 @@ make sure that you *read the whole guidelines*. If you have any doubt on the con
 - Make a fork of this repo in your account.
 - Add a folder to add a new block inside the repo, you can create a block for any application or apis available. You can use this list for [ideas](https://github.com/dcodermobile/Dcoder-community-blocks/blob/main/Roadmap.md) on apps to create block.
 - Use [dcoder-cli](https://www.npmjs.com/package/@dcodermobile/dcoder-cli) to initialise a Dcoder block with base template, login from cli and run `dcoder-cli block init`
-- At the moment editing exiting blocks is not allowed, you can create new blocks, test them and then raise a PR, only original creators should do a PR for exisitng block.
+- At the moment editing existing blocks is not allowed, you can create new blocks, test them and then raise a PR, only original creators should do a PR for existing block.
 - Once block code is generated, make the changes in index.js, take input parameters using inputs.paramName and declare those params in dcoder_block.yml
 - You can use cli `dcoder-cli block authentication:add` to add a supported oauth and you can `console.log(auths)` in code to see your authentication token, which you'll need to make the api call.
   For details on other oauth operations and commands use `dcoder-cli -h`, `dcoder-cli block -h` or refer npm guide for [dcoder-cli](https://www.npmjs.com/package/@dcodermobile/dcoder-cli)
