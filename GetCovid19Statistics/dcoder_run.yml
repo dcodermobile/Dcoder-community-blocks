@@ -1,9 +1,6 @@
-commands: 
- - run: | 
-     npm install covid19-stats
-     default: true
- - run: |- 
-     npm i 
-     npm i -g @vercel/ncc 
-     ncc build 
-     default: false
+commands:
+- run: |
+    npm i 
+    npm i -g @vercel/ncc 
+    ncc build 
+  default: true
