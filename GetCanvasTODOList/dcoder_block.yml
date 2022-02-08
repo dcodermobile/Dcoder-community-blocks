@@ -1,0 +1,18 @@
+id: TODO_LIST
+fileName: index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: domain
+  type: Text
+  default: sit.instructure.com
+  description: Domain of your institute (ex. sit.instructure.com)
+  required: true
+- name: token
+  type: Text
+  description: Authorization token
+  required: true
+output:
+  name: todoList
+  type: JsonArray
