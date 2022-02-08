@@ -9,6 +9,5 @@
 Country name as text input. 
 
 ## Outputs
-
 #### **covid19StatsReport** *JsonArray*
-Covid-19 statistics report as per the country provided as input. 
+Covid-19 statistics report as per the country provided as input.
