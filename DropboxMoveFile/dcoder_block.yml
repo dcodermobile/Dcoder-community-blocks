@@ -1,0 +1,18 @@
+id: DROPBOX_MOVE_FILE
+runFunction: main
+fileName: index.js
+auths:
+  - name: dropbox
+inputs:
+  - name: fromPath
+    type: Text
+    required: true
+    description: Full path name such as /Folder1/Folder2/File Name.pdf
+  - name: toPath
+    type: Text
+    required: true
+    description: New full path name such as /New Folder1/Folder2/File Name.pdf
+output:
+  name: response
+  type: JsonObject
+  description: Response from dropbox.
