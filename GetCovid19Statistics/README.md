@@ -2,7 +2,7 @@
 
 ## Description
 
-"covid19-stats" is an NPM package to retrieve worldometer's live Covid-19 stats. It uses web scraping to get the statistical information. You can get the live statistics of your country just by providing country name as input. 
+"covid19-stats" is an NPM package to retrieve worldometer's live Covid-19 stats. It uses web scraping to get the statistical information. Using this block, you can get the live statistics of your country just by providing country name as input. 
 
 
 # Inputs
