@@ -1,0 +1,20 @@
+id: GET_CANVAS_INBOX
+fileName: index.js
+runFunction: main
+auths: []
+env: null
+inputs:
+- name: domain
+  type: Text
+  default: sit.instructure.com
+  description: Domain of your institute (ex. sit.instructure.com)
+  required: true
+- name: token
+  type: Text
+  default:
+  description: Token from your canvas profile
+  required: true
+output:
+  name: inboxList
+  description: List of conversations from canvas
+  type: JsonArray
