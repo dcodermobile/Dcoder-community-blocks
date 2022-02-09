@@ -6,4 +6,4 @@ commands:
       npm i
       npm i -g @vercel/ncc
       ncc build
-    
+    default: false
