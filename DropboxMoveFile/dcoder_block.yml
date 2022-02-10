@@ -1,7 +1,9 @@
 id: DROPBOX_MOVE_FILE
 runFunction: main
-fileName: index.js
+fileName: dist/index.js
 auths:
+  - name: dropbox
+  - name: googledrive
   - name: dropbox
 inputs:
   - name: fromPath
