@@ -1,11 +1,12 @@
+const fetch = require('isomorphic-fetch')
+const { Dropbox } = require('dropbox')
+
 const main = async (inputs, auths, event) => {
-  const fetch = require('isomorphic-fetch');
-  const { Dropbox } = require('dropbox');
 
   const dbx = new Dropbox({
     accessToken: auths.DROPBOX.ACCESS_TOKEN,
     fetch
-  });
+  })
 
   try {
     const resp = await dbx.filesMoveV2({
