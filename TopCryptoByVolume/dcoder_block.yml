@@ -4,21 +4,21 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: tsym
-  type: Text
-  default: USD
-  description: 'The currency symbol to convert into, for ex: USD, INR, EUR'
-  required: false
-- name: limit
-  type: Number
-  default: 10
-  description: The number of items in result.
-  required: false
-- name: api_key
-  type: Text
-  default:
-  description: Your https://cryptocompare.com API key.
-  required: true
+  - name: tsym
+    type: Text
+    default: USD
+    description: 'The currency symbol to convert into, for ex: USD, INR, EUR'
+    required: false
+  - name: limit
+    type: Number
+    default: 10
+    description: The number of items in result.
+    required: false
+  - name: api_key
+    type: Text
+    default:
+    description: Your https://cryptocompare.com API key.
+    required: true
 output:
   name: cryptoList
   description: Top crypto list.

@@ -4,16 +4,16 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: token
-  type: Text
-  description: Your Openweatherapi token, create at https://home.openweathermap.org/api_keys
-  required: true
-  subtype: One Line
-- name: city
-  type: Text
-  description: Name of the city for which weather information is needed, can also send zipcode and country separated with comma. In most cases city name alone should work.
-  required: true
-  subtype: Paragraph
+  - name: token
+    type: Text
+    description: Your Openweatherapi token, create at https://home.openweathermap.org/api_keys
+    required: true
+    subtype: One Line
+  - name: city
+    type: Text
+    description: Name of the city for which weather information is needed, can also send zipcode and country separated with comma. In most cases city name alone should work.
+    required: true
+    subtype: Paragraph
 output:
   name: weatherData
   description: Complete weather api data output as json object.

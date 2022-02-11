@@ -1,8 +1,5 @@
 const main = async (inputs, auths, event) => {
-  const {
-    Octokit
-  } = require("@octokit/core")
-
+  const { Octokit } = require('@octokit/core')
 
   const octokit = new Octokit({
     auth: auths.GITHUB.ACCESS_TOKEN
@@ -37,9 +34,7 @@ const main = async (inputs, auths, event) => {
     target_url
   }
   const main = async () => {
-    const response = await octokit.request(
-      'POST /repos/{owner}/{repo}/statuses/{sha}',
-      data)
+    const response = await octokit.request('POST /repos/{owner}/{repo}/statuses/{sha}', data)
     if (response.status == 201) {
       return true
     } else {

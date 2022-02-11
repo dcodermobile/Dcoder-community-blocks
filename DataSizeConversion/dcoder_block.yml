@@ -4,21 +4,21 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: from
-  type: Text
-  default: B
-  description: input data type -B(byte), KB(killobyte), MB(megabyte), GB(gigabyte), TB (terabyte)
-  required: true
-- name: to
-  type: Text
-  default: MB
-  description: Output data type  -B(byte), KB(killobyte), MB(megabyte), GB(gigabyte), TB (terabyte)
-  required: true
-- name: dataArray
-  type: JsonArray
-  default: ${{ [] }}
-  description: data array to be converted
-  required: true
+  - name: from
+    type: Text
+    default: B
+    description: input data type -B(byte), KB(killobyte), MB(megabyte), GB(gigabyte), TB (terabyte)
+    required: true
+  - name: to
+    type: Text
+    default: MB
+    description: Output data type  -B(byte), KB(killobyte), MB(megabyte), GB(gigabyte), TB (terabyte)
+    required: true
+  - name: dataArray
+    type: JsonArray
+    default: ${{ [] }}
+    description: data array to be converted
+    required: true
 output:
   name: convertedDataArray
   description: converted data array to specified format

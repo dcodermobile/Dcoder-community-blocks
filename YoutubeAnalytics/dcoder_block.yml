@@ -2,29 +2,29 @@ id: YOUTUBE_ANALYTICS
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: youtube_analytics
+  - name: youtube_analytics
 inputs:
-- name: startDate
-  type: Text
-  default: ${{ new Date(new Date().getTime() - ( 30* 1000*60*60*24)).toISOString() }}
-  description: |-
-    Start date for the period of youtube analytics data, can be isodate string.
-    Note: Youtube analytics data api provides data 3 days late, hence make sure atleast your start date is 3 days behind from current date.
-  required: true
-- name: endDate
-  type: Text
-  default: ${{ new Date().toISOString() }}
-  description: |-
-    End date for the period of youtube analytics data, can be isodate string.
-    Note: Youtube analytics data api provides data 3 days late, hence make sure atleast your start date is 3 days behind from current date.
-  required: true
-- name: channelId
-  type: Text
-  description: |-
-    Set this to the unique channel ID of the channel for which you are retrieving data. The user authorizing the request must be the owner of the channel.
+  - name: startDate
+    type: Text
+    default: ${{ new Date(new Date().getTime() - ( 30* 1000*60*60*24)).toISOString() }}
+    description: |-
+      Start date for the period of youtube analytics data, can be isodate string.
+      Note: Youtube analytics data api provides data 3 days late, hence make sure atleast your start date is 3 days behind from current date.
+    required: true
+  - name: endDate
+    type: Text
+    default: ${{ new Date().toISOString() }}
+    description: |-
+      End date for the period of youtube analytics data, can be isodate string.
+      Note: Youtube analytics data api provides data 3 days late, hence make sure atleast your start date is 3 days behind from current date.
+    required: true
+  - name: channelId
+    type: Text
+    description: |-
+      Set this to the unique channel ID of the channel for which you are retrieving data. The user authorizing the request must be the owner of the channel.
 
-    The channel ID is currently a string that begins with the letters UC, though its format is subject to change. (You can find your channel's ID on the advanced account settings page for your YouTube channel, link here https://www.youtube.com/account_advanced )
-  required: false
+      The channel ID is currently a string that begins with the letters UC, though its format is subject to change. (You can find your channel's ID on the advanced account settings page for your YouTube channel, link here https://www.youtube.com/account_advanced )
+    required: false
 output:
   name: analytics
   description: Youtube analytics data.

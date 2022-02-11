@@ -4,47 +4,47 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: base_id
-  type: Text
-  default:
-  description: Airtable base_id.
-  required: true
-- name: table
-  type: Text
-  description: Airtable table id or table name.
-  required: true
-- name: api_key
-  type: Text
-  default:
-  description: Airtable api key.
-  required: true
-- name: viewId
-  type: Text
-  description: The name or ID of a view in the table. If set, only the records in that view will be returned. The records will be sorted according to the order of the view unless the sort parameter is included, which overrides that order. Fields hidden in this view will be returned in the results. To only return a subset of fields, use the fields parameter.
-  required: false
-- name: filterByFormula
-  type: Text
-  description: |-
-    A formula used to filter records. The formula will be evaluated for each record, and if the result is not 0, false, "", NaN, [], or #Error! the record will be included in the response.
+  - name: base_id
+    type: Text
+    default:
+    description: Airtable base_id.
+    required: true
+  - name: table
+    type: Text
+    description: Airtable table id or table name.
+    required: true
+  - name: api_key
+    type: Text
+    default:
+    description: Airtable api key.
+    required: true
+  - name: viewId
+    type: Text
+    description: The name or ID of a view in the table. If set, only the records in that view will be returned. The records will be sorted according to the order of the view unless the sort parameter is included, which overrides that order. Fields hidden in this view will be returned in the results. To only return a subset of fields, use the fields parameter.
+    required: false
+  - name: filterByFormula
+    type: Text
+    description: |-
+      A formula used to filter records. The formula will be evaluated for each record, and if the result is not 0, false, "", NaN, [], or #Error! the record will be included in the response.
 
-    If combined with the view parameter, only records in that view which satisfy the formula will be returned.
+      If combined with the view parameter, only records in that view which satisfy the formula will be returned.
 
-    For example, to only include records where fieldname isn't empty, pass in NOT({fieldname} = '') as a parameter like this:
+      For example, to only include records where fieldname isn't empty, pass in NOT({fieldname} = '') as a parameter like this:
 
-     filterByFormula: "NOT({fieldname} = '')"
-  required: false
-- name: maxRecords
-  type: Number
-  description: Provide maxRecords that you want to return if kept empty will return all the records.
-  required: false
-- name: sortFieldId
-  type: Text
-  description: Sort field, id of the field with which you want to sort the results.
-  required: false
-- name: sortDirection
-  type: Text
-  description: Sort results bases on Ascending or descending use "asc" for Ascending and "desc" for descending.
-  required: false
+       filterByFormula: "NOT({fieldname} = '')"
+    required: false
+  - name: maxRecords
+    type: Number
+    description: Provide maxRecords that you want to return if kept empty will return all the records.
+    required: false
+  - name: sortFieldId
+    type: Text
+    description: Sort field, id of the field with which you want to sort the results.
+    required: false
+  - name: sortDirection
+    type: Text
+    description: Sort results bases on Ascending or descending use "asc" for Ascending and "desc" for descending.
+    required: false
 output:
   name: records
   description: Airtable records.

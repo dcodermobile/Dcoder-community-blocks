@@ -4,38 +4,38 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: host
-  type: Text
-  description: |-
-    Your Mysql server hostname.
-    Make sure to whitelist Dcoder's ips to connect to your Db instance. https://code.dcoder.tech/feed/article/6055aa0f646cc60a0c9ac65e/add-dcoder-ips-to-whitelist
-  required: true
-- name: port
-  type: Number
-  description: Port to connect with your Mysql server.
-  required: true
-- name: username
-  type: Text
-  description: Username for login into Mysql server.
-  required: true
-- name: password
-  type: Text
-  description: Password for login into Mysql.
-  required: true
-- name: database
-  type: Text
-  description: Name of the database to connect to.
-  required: true
-- name: query
-  type: Text
-  default:
-  description: MySql query to be executed, can contain ? for parameters to be replaced.
-  required: true
-- name: parameters
-  type: JsonArray
-  default: ${{ [] }}
-  description: Optionally provide the value of parameters defined in query as ? as an array.
-  required: false
+  - name: host
+    type: Text
+    description: |-
+      Your Mysql server hostname.
+      Make sure to whitelist Dcoder's ips to connect to your Db instance. https://code.dcoder.tech/feed/article/6055aa0f646cc60a0c9ac65e/add-dcoder-ips-to-whitelist
+    required: true
+  - name: port
+    type: Number
+    description: Port to connect with your Mysql server.
+    required: true
+  - name: username
+    type: Text
+    description: Username for login into Mysql server.
+    required: true
+  - name: password
+    type: Text
+    description: Password for login into Mysql.
+    required: true
+  - name: database
+    type: Text
+    description: Name of the database to connect to.
+    required: true
+  - name: query
+    type: Text
+    default:
+    description: MySql query to be executed, can contain ? for parameters to be replaced.
+    required: true
+  - name: parameters
+    type: JsonArray
+    default: ${{ [] }}
+    description: Optionally provide the value of parameters defined in query as ? as an array.
+    required: false
 output:
   name: queryResult
   description: The output of the query can be accessed from queryResult.data, run the block once to get dynamic output suggestions.

@@ -4,27 +4,27 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: records
-  type: JsonArray
-  description: Provide array of objects.
-  required: true
-- name: base_id
-  type: Text
-  description: Your Airtable base_id
-  required: true
-- name: table_name
-  type: Text
-  description: Your Airtable table name.
-  required: true
-- name: api_key
-  type: Text
-  description: Your Airtable api_key.
-  required: true
-- name: typecast
-  type: Boolean
-  default: false
-  description: Whether to typecast the values.
-  required: false
+  - name: records
+    type: JsonArray
+    description: Provide array of objects.
+    required: true
+  - name: base_id
+    type: Text
+    description: Your Airtable base_id
+    required: true
+  - name: table_name
+    type: Text
+    description: Your Airtable table name.
+    required: true
+  - name: api_key
+    type: Text
+    description: Your Airtable api_key.
+    required: true
+  - name: typecast
+    type: Boolean
+    default: false
+    description: Whether to typecast the values.
+    required: false
 output:
   name: updatedRecords
   description: Airtable updated records.

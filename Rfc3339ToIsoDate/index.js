@@ -1,7 +1,5 @@
 const main = async (inputs, auths, event) => {
-
-
-  const moment = require("moment-timezone")
+  const moment = require('moment-timezone')
   const inputDate = inputs.inputDate
 
   console.log(moment(inputDate).toISOString())

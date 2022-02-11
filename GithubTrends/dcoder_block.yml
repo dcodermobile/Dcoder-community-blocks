@@ -4,25 +4,25 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: section
-  type: Text
-  default:
-  description: |-
-    Optional, the value can be 'repositories' or 'developers', default is repositories.
-    Provide language in case you select developers.
-  required: false
-- name: language
-  type: Text
-  description: Optional, programming language for ex 'javascript', 'java', default empty means 'all'.
-  required: false
-- name: since
-  type: Text
-  description: Period, can be 'daily', 'weekly', 'monthly'. default empty means daily.
-  required: false
-- name: spoken_language_code
-  type: Text
-  description: Language code, default or empty means all, values can be es en zh etc.
-  required: false
+  - name: section
+    type: Text
+    default:
+    description: |-
+      Optional, the value can be 'repositories' or 'developers', default is repositories.
+      Provide language in case you select developers.
+    required: false
+  - name: language
+    type: Text
+    description: Optional, programming language for ex 'javascript', 'java', default empty means 'all'.
+    required: false
+  - name: since
+    type: Text
+    description: Period, can be 'daily', 'weekly', 'monthly'. default empty means daily.
+    required: false
+  - name: spoken_language_code
+    type: Text
+    description: Language code, default or empty means all, values can be es en zh etc.
+    required: false
 output:
   name: resultArray
   description: Array of repos or developers.

@@ -1,13 +1,10 @@
 const main = async (inputs, auths, event) => {
-
-  const {
-    Dropbox
-  } = require("dropbox")
+  const { Dropbox } = require('dropbox')
   const dbx = new Dropbox({
     accessToken: auths.DROPBOX.ACCESS_TOKEN
-  });
+  })
   let filepath = inputs.filepath
-  const path = require("path")
+  const path = require('path')
   const fs = require('fs')
 
   //filepath = path.join(__dirname,filepath)

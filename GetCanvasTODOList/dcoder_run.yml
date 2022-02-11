@@ -1,8 +1,8 @@
 commands:
-- run:
-  default: true
-- run: |
-    npm i
-    npm i -g @vercel/ncc
-    ncc build
-  default: false
+  - run:
+    default: true
+  - run: |
+      npm i
+      npm i -g @vercel/ncc
+      ncc build
+    default: false

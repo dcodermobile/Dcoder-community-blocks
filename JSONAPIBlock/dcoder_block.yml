@@ -4,29 +4,29 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: headers
-  type: JsonObject
-  default: ${{ {} }}
-  description: A JSON object for request headers
-  required: false
-- name: method
-  type: Text
-  description: Request method type post, get, put or delete, defaults to get
-  required: false
-- name: url
-  type: Text
-  description: Url of the api to be called.
-  required: true
-- name: body
-  type: JsonObject
-  default: ${{ {} }}
-  description: For post requests specify body object.
-  required: false
-- name: query_params
-  type: JsonObject
-  default: ${{ {} }}
-  description: Request url parameters to be appended at the end of url to be provided as JSON object.
-  required: false
+  - name: headers
+    type: JsonObject
+    default: ${{ {} }}
+    description: A JSON object for request headers
+    required: false
+  - name: method
+    type: Text
+    description: Request method type post, get, put or delete, defaults to get
+    required: false
+  - name: url
+    type: Text
+    description: Url of the api to be called.
+    required: true
+  - name: body
+    type: JsonObject
+    default: ${{ {} }}
+    description: For post requests specify body object.
+    required: false
+  - name: query_params
+    type: JsonObject
+    default: ${{ {} }}
+    description: Request url parameters to be appended at the end of url to be provided as JSON object.
+    required: false
 output:
   name: apiResponse
   description: json api response.

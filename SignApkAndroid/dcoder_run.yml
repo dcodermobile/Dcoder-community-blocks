@@ -1,104 +1,104 @@
 blocks:
-- name: Setup Android Environment
-  id: SETUP_ANDROID_ENVIRONMENT
-  default: true
-  run: |
-    sudo apt-get install -y wget unzip
-    cd ~
-    wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
-    unzip sdk-tools-linux-4333796.zip
-    rm sdk-tools-linux-4333796.zip
-    mkdir android-sdk
-    mv tools android-sdk/tools
-    echo $PATH
-    yes | sdkmanager --licenses
-  description: 'This block is used to setup Android build environment. '
-  env:
-  - name: ANDROID_SDK_ROOT
-    value: $HOME/android-sdk
-  - name: PATH
-    value: $PATH:$HOME/android-sdk/tools/bin:$HOME/android-sdk/platform-tools
-- name: Sign Apk
-  id: SIGN_APK
-  default: false
-  run: node apk_sign/dist/index.js
-  description: This block is used to sign Apk build using key
-  inputs:
-  - name: RELEASE_DIR
-    type: Text
-    required: false
-    title: Enter apk release directory path
-  - name: SIGNING_KEY_BASE_64
-    type: Text
-    required: false
-    title: Enter apk signing key ( base64 )
-  - name: ALIAS
-    type: Text
-    required: false
-    title: Enter alias
-  - name: KEY_PASSWORD
-    type: Text
-    required: false
-    title: Enter key password
-  - name: KEY_STORE_PASSWORD
-    type: Text
-    required: false
-    title: Enter key store password
-  outputs:
-  - name: SIGNED_APK_PATH
-    type: Text
-    title: Signed apk path
-- name: Upload Apk to PlayStore
-  id: UPLOAD_APK_TO_PLAYSTORE
-  default: false
-  run: node apk_upload/dist/index.js
-  description: This block is used to upload signed apk to playstore.
-  inputs:
-  - name: SERVICE_ACCOUNT_JSON_RAW
-    type: Text
-    required: false
-    title: Enter service account json raw
-  - name: PACKAGE_NAME
-    type: Text
-    required: false
-    title: Enter package name
-  - name: RELEASE_FILES
-    type: Text
-    description: 'Multiple release file in string form seprated by "," '
-    required: false
-    title: Enter release files
-  - name: TRACK
-    type: Text
-    description: Track name to upload Apk. eg- alpha
-    required: false
-    title: 'Enter track '
-  - name: MAPPING_FILE
-    type: Text
-    required: false
-    title: Enter mapping file path
-- name: Setup Java
-  id: SETUP_JAVA
-  default: false
-  run: "sudo apt-get update\nsudo apt-get install -y openjdk-8-jdk "
-  description: This block installs java
-  env:
-  - name: JAVA_HOME
-    value: /usr/lib/jvm/java-8-openjdk-amd64
-  - name: PATH
-    value: $PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin
-- name: Build Android Apk
-  id: BUILD_ANDROID_APK
-  default: false
-  run: cd ${{ inputs.PROJECT_PATH }} && chmod +x gradlew && ./gradlew assembleProdRelease
-  inputs:
-  - name: PROJECT_PATH
-    type: Text
-    required: false
-    title: Enter Project Path
-- name: Build project
-  id: BUILD_PROJECT
-  default: false
-  run: |
-    /bin/bash -c "cd apk_upload && npm i -s @dcodermobile/io && npm i -g @vercel/ncc && ncc build upload.js -o dist"
-    /bin/bash -c "cd apk_sign && npm i -s @dcodermobile/io path fs child_process && ncc build sign.js -o dist"
-  description: builds a single executable in dist
+  - name: Setup Android Environment
+    id: SETUP_ANDROID_ENVIRONMENT
+    default: true
+    run: |
+      sudo apt-get install -y wget unzip
+      cd ~
+      wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+      unzip sdk-tools-linux-4333796.zip
+      rm sdk-tools-linux-4333796.zip
+      mkdir android-sdk
+      mv tools android-sdk/tools
+      echo $PATH
+      yes | sdkmanager --licenses
+    description: 'This block is used to setup Android build environment. '
+    env:
+      - name: ANDROID_SDK_ROOT
+        value: $HOME/android-sdk
+      - name: PATH
+        value: $PATH:$HOME/android-sdk/tools/bin:$HOME/android-sdk/platform-tools
+  - name: Sign Apk
+    id: SIGN_APK
+    default: false
+    run: node apk_sign/dist/index.js
+    description: This block is used to sign Apk build using key
+    inputs:
+      - name: RELEASE_DIR
+        type: Text
+        required: false
+        title: Enter apk release directory path
+      - name: SIGNING_KEY_BASE_64
+        type: Text
+        required: false
+        title: Enter apk signing key ( base64 )
+      - name: ALIAS
+        type: Text
+        required: false
+        title: Enter alias
+      - name: KEY_PASSWORD
+        type: Text
+        required: false
+        title: Enter key password
+      - name: KEY_STORE_PASSWORD
+        type: Text
+        required: false
+        title: Enter key store password
+    outputs:
+      - name: SIGNED_APK_PATH
+        type: Text
+        title: Signed apk path
+  - name: Upload Apk to PlayStore
+    id: UPLOAD_APK_TO_PLAYSTORE
+    default: false
+    run: node apk_upload/dist/index.js
+    description: This block is used to upload signed apk to playstore.
+    inputs:
+      - name: SERVICE_ACCOUNT_JSON_RAW
+        type: Text
+        required: false
+        title: Enter service account json raw
+      - name: PACKAGE_NAME
+        type: Text
+        required: false
+        title: Enter package name
+      - name: RELEASE_FILES
+        type: Text
+        description: 'Multiple release file in string form seprated by "," '
+        required: false
+        title: Enter release files
+      - name: TRACK
+        type: Text
+        description: Track name to upload Apk. eg- alpha
+        required: false
+        title: 'Enter track '
+      - name: MAPPING_FILE
+        type: Text
+        required: false
+        title: Enter mapping file path
+  - name: Setup Java
+    id: SETUP_JAVA
+    default: false
+    run: "sudo apt-get update\nsudo apt-get install -y openjdk-8-jdk "
+    description: This block installs java
+    env:
+      - name: JAVA_HOME
+        value: /usr/lib/jvm/java-8-openjdk-amd64
+      - name: PATH
+        value: $PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin
+  - name: Build Android Apk
+    id: BUILD_ANDROID_APK
+    default: false
+    run: cd ${{ inputs.PROJECT_PATH }} && chmod +x gradlew && ./gradlew assembleProdRelease
+    inputs:
+      - name: PROJECT_PATH
+        type: Text
+        required: false
+        title: Enter Project Path
+  - name: Build project
+    id: BUILD_PROJECT
+    default: false
+    run: |
+      /bin/bash -c "cd apk_upload && npm i -s @dcodermobile/io && npm i -g @vercel/ncc && ncc build upload.js -o dist"
+      /bin/bash -c "cd apk_sign && npm i -s @dcodermobile/io path fs child_process && ncc build sign.js -o dist"
+    description: builds a single executable in dist

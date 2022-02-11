@@ -3,20 +3,20 @@ fileName: dist/index.js
 runFunction: main
 auths: []
 inputs:
-- name: filePath
-  type: Text
-  description: 'Full path to the template document on disk. for ex: /tmp/file.docx'
-  required: true
-- name: variablesToReplace
-  type: JsonObject
-  default: ${{ {} }}
-  description: A json key value pair object for each variable to be replaced in the doc.
-  required: true
-- name: newFilePath
-  type: Text
-  default: /tmp/new.docx
-  description: 'Full path to the new docx file. for ex: /tmp/new.docx'
-  required: true
+  - name: filePath
+    type: Text
+    description: 'Full path to the template document on disk. for ex: /tmp/file.docx'
+    required: true
+  - name: variablesToReplace
+    type: JsonObject
+    default: ${{ {} }}
+    description: A json key value pair object for each variable to be replaced in the doc.
+    required: true
+  - name: newFilePath
+    type: Text
+    default: /tmp/new.docx
+    description: 'Full path to the new docx file. for ex: /tmp/new.docx'
+    required: true
 output:
   name: updatedFilePath
   description: Path to the updated file.

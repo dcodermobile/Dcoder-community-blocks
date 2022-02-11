@@ -3,10 +3,10 @@ fileName: dist/index.js
 runFunction: main
 auths: []
 inputs:
-- name: mongo_url
-  type: Text
-  description: Mongodb url with admin db access to execute serverStatus command, ex, mongodb://user:pass@host:port/dbname?replicaSet=setname
-  required: true
+  - name: mongo_url
+    type: Text
+    description: Mongodb url with admin db access to execute serverStatus command, ex, mongodb://user:pass@host:port/dbname?replicaSet=setname
+    required: true
 output:
   name: stats
   description: Mongodb stats

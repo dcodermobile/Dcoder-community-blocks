@@ -1,61 +1,61 @@
 commands:
-- run: |-
-    npm i
-    npm i -g @vercel/ncc
-    ncc build index.js
-  default: true
+  - run: |-
+      npm i
+      npm i -g @vercel/ncc
+      ncc build index.js
+    default: true
 blocks:
-- name: Send message using user
-  id: SEND_MESSAGE
-  default: true
-  run: |
-    node dist/index.js
-  description: The blocks sends a message to a slack Channel using your account authentication.
-  auths:
-  - name: slack
-  inputs:
-  - name: channel
-    type: Text
-    default: general
-    description: slack channel
-    required: true
-    title: What's the channel name?
-  - name: token
-    type: Text
-    default: ${{ auths.SLACK.ACCESS_TOKEN }}
-    description: Slack auth token
-    required: true
-    title: What's your slack token?
-  - name: text
-    type: Text
-    description: message to be sent
-    required: true
-    title: The text message
-  outputs: []
-  ID: SEND_MESSAGE
-- name: Git Push
-  id: GIT_PUSH
-  default: false
-  run: |
-    git push https://${{ secrets.username }}:${{ secrets.password }}@${{ inputs.REMOTE_REPO_URL }} ${{ inputs.BRANCH_NAME }}
-  description: The git push block is used to upload local repository content to a remote repository.
-  inputs:
-  - name: BRANCH_NAME
-    type: Text
-    default: master
-    description: branch to push
-    required: true
-    title: Please enter branch name
-  - name: REMOTE_REPO_URL
-    type: Text
-    description: url of remote repository
-    required: true
-    title: Please enter remote repository's url
-- name: Build project
-  id: BUILD_PROJECT
-  default: false
-  run: |-
-    npm i
-    npm i -g @vercel/ncc
-    ncc build index.js -o dist
-  description: builds a single executable in dist
+  - name: Send message using user
+    id: SEND_MESSAGE
+    default: true
+    run: |
+      node dist/index.js
+    description: The blocks sends a message to a slack Channel using your account authentication.
+    auths:
+      - name: slack
+    inputs:
+      - name: channel
+        type: Text
+        default: general
+        description: slack channel
+        required: true
+        title: What's the channel name?
+      - name: token
+        type: Text
+        default: ${{ auths.SLACK.ACCESS_TOKEN }}
+        description: Slack auth token
+        required: true
+        title: What's your slack token?
+      - name: text
+        type: Text
+        description: message to be sent
+        required: true
+        title: The text message
+    outputs: []
+    ID: SEND_MESSAGE
+  - name: Git Push
+    id: GIT_PUSH
+    default: false
+    run: |
+      git push https://${{ secrets.username }}:${{ secrets.password }}@${{ inputs.REMOTE_REPO_URL }} ${{ inputs.BRANCH_NAME }}
+    description: The git push block is used to upload local repository content to a remote repository.
+    inputs:
+      - name: BRANCH_NAME
+        type: Text
+        default: master
+        description: branch to push
+        required: true
+        title: Please enter branch name
+      - name: REMOTE_REPO_URL
+        type: Text
+        description: url of remote repository
+        required: true
+        title: Please enter remote repository's url
+  - name: Build project
+    id: BUILD_PROJECT
+    default: false
+    run: |-
+      npm i
+      npm i -g @vercel/ncc
+      ncc build index.js -o dist
+    description: builds a single executable in dist

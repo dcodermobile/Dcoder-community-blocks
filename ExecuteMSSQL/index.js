@@ -1,8 +1,7 @@
 const sql = require('mssql')
 
-const main = async(inputs, auths, context) => {
-  
-  const query =  inputs.query
+const main = async (inputs, auths, context) => {
+  const query = inputs.query
   const { host, port, username, password, database } = inputs
   const sqlConfig = {
     user: username,

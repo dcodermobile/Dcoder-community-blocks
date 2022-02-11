@@ -4,41 +4,41 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: project
-  type: Text
-  description: Your project id on Google cloud console.
-  required: true
-- name: package
-  type: Text
-  description: 'App''s package name for ex: com.facebook'
-  required: true
-- name: platform
-  type: Text
-  default: android
-  description: platform, value can be android or ios.
-  required: false
-- name: location
-  type: Text
-  default: US
-  description: Big query dataset location.
-  required: true
-- name: service_account
-  type: Text
-  description: Service account json in raw text format.
-  required: true
-- name: days
-  type: Text
-  default: 7
-  description: Data of last n days.
-  required: true
-- name: build_version
-  type: Text
-  description: App's build version code, optional.
-  required: false
-- name: display_version
-  type: Text
-  description: App's display version, optional.
-  required: false
+  - name: project
+    type: Text
+    description: Your project id on Google cloud console.
+    required: true
+  - name: package
+    type: Text
+    description: "App's package name for ex: com.facebook"
+    required: true
+  - name: platform
+    type: Text
+    default: android
+    description: platform, value can be android or ios.
+    required: false
+  - name: location
+    type: Text
+    default: US
+    description: Big query dataset location.
+    required: true
+  - name: service_account
+    type: Text
+    description: Service account json in raw text format.
+    required: true
+  - name: days
+    type: Text
+    default: 7
+    description: Data of last n days.
+    required: true
+  - name: build_version
+    type: Text
+    description: App's build version code, optional.
+    required: false
+  - name: display_version
+    type: Text
+    description: App's display version, optional.
+    required: false
 output:
   name: crashData
   description: Array of crash data in aescending order of date.

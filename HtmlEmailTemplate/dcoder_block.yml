@@ -3,31 +3,31 @@ fileName: dist/index.js
 runFunction: main
 auths: []
 inputs:
-- name: JSON_DATA
-  type: JsonObject
-  default: ${{ {} }}
-  description: data to generate report
-  required: true
-- name: image_url
-  type: Text
-  description: image url for the template, will be shown at top, if not provided default Dcoder image will be used.
-  required: false
-- name: title
-  type: Text
-  description: Title for the template.
-  required: false
-- name: bg_color
-  type: Text
-  description: 'bg color for the html generated, can be in hex color format ex: #212121'
-  required: false
-- name: item_bg_color
-  type: Text
-  description: 'Background color for each item in json, example: #212121'
-  required: false
-- name: description
-  type: Text
-  description: Description for the template.
-  required: false
+  - name: JSON_DATA
+    type: JsonObject
+    default: ${{ {} }}
+    description: data to generate report
+    required: true
+  - name: image_url
+    type: Text
+    description: image url for the template, will be shown at top, if not provided default Dcoder image will be used.
+    required: false
+  - name: title
+    type: Text
+    description: Title for the template.
+    required: false
+  - name: bg_color
+    type: Text
+    description: 'bg color for the html generated, can be in hex color format ex: #212121'
+    required: false
+  - name: item_bg_color
+    type: Text
+    description: 'Background color for each item in json, example: #212121'
+    required: false
+  - name: description
+    type: Text
+    description: Description for the template.
+    required: false
 output:
   name: html
   description: Converted html.

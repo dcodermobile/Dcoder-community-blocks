@@ -1,9 +1,9 @@
 commands:
-- run:
-  default: true
+  - run:
+    default: true
 blocks:
-- run: |
-    npm i
-    node index.js
-  default: true
-  id: test
+  - run: |
+      npm i
+      node index.js
+    default: true
+    id: test

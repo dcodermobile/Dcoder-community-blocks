@@ -2,13 +2,13 @@ id: JIRA_PRIORITIES
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: jira
+  - name: jira
 inputs:
-- name: sitename
-  type: Text
-  default: teamdcoder
-  description: Your jira site-name, as in https://site-name.atlassian.net
-  required: true
+  - name: sitename
+    type: Text
+    default: teamdcoder
+    description: Your jira site-name, as in https://site-name.atlassian.net
+    required: true
 output:
   name: priorities
   description: Array of priorities.

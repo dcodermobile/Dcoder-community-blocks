@@ -1,5 +1,4 @@
 const main = async (inputs, auths, event) => {
-
   const fs = require('fs')
   const path = require('path')
   // To get block input
@@ -13,7 +12,9 @@ const main = async (inputs, auths, event) => {
     if (!filepath && directory && filename) {
       filepath = path.join(directory, filename)
     } else if (!filepath) {
-      console.log('Error: filepath is not provided and optional directory and filename also not provided.')
+      console.log(
+        'Error: filepath is not provided and optional directory and filename also not provided.'
+      )
     }
     if (!mode || mode == 2) {
       fs.writeFileSync(filepath, text)

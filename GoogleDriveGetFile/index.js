@@ -10,11 +10,11 @@ const main = async (inputs, auths, event) => {
       fields: inputs.fields,
       prettyPrint: inputs.prettyPrint,
       quotaUser: inputs.quotaUser,
-      userIp: inputs.userIp,
+      userIp: inputs.userIp
     },
     headers: {
-      Authorization: `Bearer ${auths.GOOGLE_DRIVE.ACCESS_TOKEN}`,
-    },
+      Authorization: `Bearer ${auths.GOOGLE_DRIVE.ACCESS_TOKEN}`
+    }
   }
   return (await axios(config)).data
 }

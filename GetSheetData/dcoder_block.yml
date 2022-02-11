@@ -2,39 +2,39 @@ id: GET_ALL_DATA_OF_GOOGLE_SHEET
 fileName: index.js
 runFunction: main
 auths:
-- name: googlesheets
+  - name: googlesheets
 inputs:
-- name: sheet_name
-  type: Text
-  default: 9982492369
-  description: Specify a sheet within your spreadsheet, like "Sheet1", or a range of values, like "Sheet1!A1:B2"
-  required: true
-- name: valueRenderOption
-  type: Text
-  default: FORMATTED_VALUE
-  description: |-
-    How values should be represented in the output. The default render option is FORMATTED_VALUE.
-    values it can take - FORMATTED_VALUE, UNFORMATTED_VALUE, FORMULA
-  required: false
-- name: majorDimension
-  type: Text
-  default: ROWS
-  description: 'For example, if the spreadsheet data is: A1=1,B1=2,A2=3,B2=4, then
-    requesting range=A1:B2,majorDimension=ROWS will return [[1,2],[3,4]], whereas
-    requesting range=A1:B2,majorDimension=COLUMNS will return [[1,3],[2,4]].'
-  required: false
-- name: dateTimeRenderOption
-  type: Text
-  default: SERIAL_NUMBER
-  description: |-
-    How dates, times, and durations should be represented in the output. This is ignored if valueRenderOption is FORMATTED_VALUE. The default dateTime render option is SERIAL_NUMBER.
-    values it can take - SERIAL_NUMBER, FORMATTED_STRING
-  required: false
-- name: spreadsheetId
-  type: Text
-  default: 1-IBtomkxPgz41n-2RG-gXu12Ep71cKkfxfrHGm8MqWM
-  description: The ID of the spreadsheet to retrieve data from (found in the URL at docs.google.com/spreadsheets/d/{id})
-  required: true
+  - name: sheet_name
+    type: Text
+    default: 9982492369
+    description: Specify a sheet within your spreadsheet, like "Sheet1", or a range of values, like "Sheet1!A1:B2"
+    required: true
+  - name: valueRenderOption
+    type: Text
+    default: FORMATTED_VALUE
+    description: |-
+      How values should be represented in the output. The default render option is FORMATTED_VALUE.
+      values it can take - FORMATTED_VALUE, UNFORMATTED_VALUE, FORMULA
+    required: false
+  - name: majorDimension
+    type: Text
+    default: ROWS
+    description: 'For example, if the spreadsheet data is: A1=1,B1=2,A2=3,B2=4, then
+      requesting range=A1:B2,majorDimension=ROWS will return [[1,2],[3,4]], whereas
+      requesting range=A1:B2,majorDimension=COLUMNS will return [[1,3],[2,4]].'
+    required: false
+  - name: dateTimeRenderOption
+    type: Text
+    default: SERIAL_NUMBER
+    description: |-
+      How dates, times, and durations should be represented in the output. This is ignored if valueRenderOption is FORMATTED_VALUE. The default dateTime render option is SERIAL_NUMBER.
+      values it can take - SERIAL_NUMBER, FORMATTED_STRING
+    required: false
+  - name: spreadsheetId
+    type: Text
+    default: 1-IBtomkxPgz41n-2RG-gXu12Ep71cKkfxfrHGm8MqWM
+    description: The ID of the spreadsheet to retrieve data from (found in the URL at docs.google.com/spreadsheets/d/{id})
+    required: true
 output:
   name: sheetData
   description: data of all the cells in sheet

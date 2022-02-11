@@ -2,19 +2,19 @@ id: GET_JIRA_PROJECTS
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: jira
+  - name: jira
 env: null
 inputs:
-- name: sitename
-  type: Text
-  default: teamdcoder
-  description: Your jira site-name, as in https://site-name.atlassian.net
-  required: true
-- name: maxResults
-  type: Number
-  default: 10
-  description: Limit the number of issues to be returned.
-  required: true
+  - name: sitename
+    type: Text
+    default: teamdcoder
+    description: Your jira site-name, as in https://site-name.atlassian.net
+    required: true
+  - name: maxResults
+    type: Number
+    default: 10
+    description: Limit the number of issues to be returned.
+    required: true
 output:
   name: users
   description: Array of users.

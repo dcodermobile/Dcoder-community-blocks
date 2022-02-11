@@ -1,22 +1,35 @@
 # Get mongodb distinct docs
+
 [![Run On Dcoder](https://static-content.dcoder.tech/dcoder-assets/run-on-dcoder.svg)](https://code.dcoder.tech/feed/block/61350e89dbb44616f84ad4c5)
 
 ## Description
+
 Gets mongodb distinct docs in a collection given mongodb connection uri and field to get distinct docs and optional query.
 
 ## Inputs
-#### **url**  *Text*
+
+#### **url** _Text_
+
 Url for mongodb.
-#### **dbName**  *Text*
+
+#### **dbName** _Text_
+
 Name of the db.
-#### **collectionName**  *Text*
+
+#### **collectionName** _Text_
+
 Name of the collection.
-#### **query**  *JsonObject*
+
+#### **query** _JsonObject_
+
 Query for filtered data as a json object.
-#### **field**  *Text*
+
+#### **field** _Text_
+
 Name of the field for which to return the distinct values.
 
 ## Output
-#### **distinctDocs**  *JsonArray*
-distinct docs.
 
+#### **distinctDocs** _JsonArray_
+
+distinct docs.

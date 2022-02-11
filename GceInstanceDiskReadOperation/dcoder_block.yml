@@ -3,19 +3,19 @@ fileName: index.js
 runFunction: main
 auths: []
 inputs:
-- name: projectId
-  type: Text
-  description: Project id of instance
-  required: true
-- name: instanceName
-  type: Text
-  description: name of the instance on gce
-  required: true
-- name: serviceAccountKey
-  type: Text
-  default: ${{ secrets.SERVICE_ACCOUNT_KEY }}
-  description: service account key to access gce instance log data
-  required: true
+  - name: projectId
+    type: Text
+    description: Project id of instance
+    required: true
+  - name: instanceName
+    type: Text
+    description: name of the instance on gce
+    required: true
+  - name: serviceAccountKey
+    type: Text
+    default: ${{ secrets.SERVICE_ACCOUNT_KEY }}
+    description: service account key to access gce instance log data
+    required: true
 output:
   name: diskReadData
   description: Disk write data of GCE instance.
