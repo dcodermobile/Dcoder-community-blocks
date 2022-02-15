@@ -4,29 +4,29 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: mongoUri
-  type: Text
-  default: ${{ secrets.MONGO_URI }}
-  description: Connection string to connect to MongoDB server.
-  required: true
-- name: dbName
-  type: Text
-  description: Name of the db to connect.
-  required: true
-- name: collectionName
-  type: Text
-  description: Name of the collection to query.
-  required: true
-- name: days
-  type: Number
-  default: 30
-  description: Days data required - default to 30
-  required: false
-- name: matchCondition
-  type: JsonObject
-  default: ${{ {} }}
-  description: Aditional condition to match while querying db.
-  required: false
+  - name: mongoUri
+    type: Text
+    default: ${{ secrets.MONGO_URI }}
+    description: Connection string to connect to MongoDB server.
+    required: true
+  - name: dbName
+    type: Text
+    description: Name of the db to connect.
+    required: true
+  - name: collectionName
+    type: Text
+    description: Name of the collection to query.
+    required: true
+  - name: days
+    type: Number
+    default: 30
+    description: Days data required - default to 30
+    required: false
+  - name: matchCondition
+    type: JsonObject
+    default: ${{ {} }}
+    description: Aditional condition to match while querying db.
+    required: false
 output:
   name: countResult
   description: Count result of the given collection.

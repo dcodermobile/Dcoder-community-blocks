@@ -4,14 +4,14 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: firstNumber
-  type: Number
-  description: Enter your first number.
-  required: true
-- name: secondNumber
-  type: Number
-  description: Enter your second number.
-  required: true
+  - name: firstNumber
+    type: Number
+    description: Enter your first number.
+    required: true
+  - name: secondNumber
+    type: Number
+    description: Enter your second number.
+    required: true
 output:
   name: percentage
   description: Percentage increament or decreament.

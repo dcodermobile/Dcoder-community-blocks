@@ -1,8 +1,8 @@
-const Redis = require("ioredis")
+const Redis = require('ioredis')
 
-const main = async(inputs, auths, context) => {
-  const connectionUri =  inputs.connectionUri
-  const key =  inputs.key
+const main = async (inputs, auths, context) => {
+  const connectionUri = inputs.connectionUri
+  const key = inputs.key
   const redis = new Redis(connectionUri)
   const value = await redis.get(key)
   redis.disconnect()

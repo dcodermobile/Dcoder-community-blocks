@@ -2,7 +2,7 @@ id: NOTION_GET_PROFILE
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: notion
+  - name: notion
 env: null
 inputs: null
 output:

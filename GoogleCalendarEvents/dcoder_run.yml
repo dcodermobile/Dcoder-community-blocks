@@ -1,9 +1,9 @@
 commands:
-- run: |
-    npm i
-    node index.js
-  default: true
-- run: |-
-    npm i -g @vercel/ncc
-    ncc build
-  default: false
+  - run: |
+      npm i
+      node index.js
+    default: true
+  - run: |-
+      npm i -g @vercel/ncc
+      ncc build
+    default: false

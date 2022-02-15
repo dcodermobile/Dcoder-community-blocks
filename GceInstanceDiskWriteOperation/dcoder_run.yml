@@ -3,4 +3,3 @@ commands:
       npm i
       node index.js
     default: true
-    

@@ -1,6 +1,5 @@
-const chunk = require('lodash.chunk');
-const axios = require("axios")
-
+const chunk = require('lodash.chunk')
+const axios = require('axios')
 
 const main = async (inputs, auths, event) => {
   let record = inputs.record
@@ -9,18 +8,16 @@ const main = async (inputs, auths, event) => {
   const api_key = inputs.api_key
   const table_name = inputs.table_name
   if (!record) {
-    console.log("No records found")
+    console.log('No records found')
     return
   }
   record = JSON.parse(record)
 
-
-
   const config = {
-    method: "patch",
+    method: 'patch',
     url: `https://api.airtable.com/v0/${base_id}/${encodeURIComponent(table_name)}/${id}`,
     headers: {
-      Authorization: `Bearer ${api_key}`,
+      Authorization: `Bearer ${api_key}`
     },
     data: {
       fields: record,

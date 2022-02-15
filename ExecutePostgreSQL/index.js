@@ -1,10 +1,10 @@
 const { Pool, Client } = require('pg')
 
-const main = async(inputs, auths, context) => {
-  const connectionURI =  inputs.connectionURI
-  const query =  inputs.query
-  const parameters =  inputs.parameters
-  
+const main = async (inputs, auths, context) => {
+  const connectionURI = inputs.connectionURI
+  const query = inputs.query
+  const parameters = inputs.parameters
+
   console.log(connectionURI)
   /*const pool = new Pool({
     connectionURI,
@@ -18,15 +18,15 @@ const main = async(inputs, auths, context) => {
   })
   await client.connect()
   let res = null
-  if(parameters && parameters.length >0){
-    res = await client.query(query, parameters )
-  }else{
+  if (parameters && parameters.length > 0) {
+    res = await client.query(query, parameters)
+  } else {
     res = await client.query(query)
   }
   await client.end()
   let output = {}
   output.data = res
-  
+
   return output
 }
 

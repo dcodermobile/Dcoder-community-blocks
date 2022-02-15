@@ -1,11 +1,15 @@
 # Delete a key from Redis
+
 [![Run On Dcoder](https://static-content.dcoder.tech/dcoder-assets/run-on-dcoder.svg)](https://code.dcoder.tech/feed/block/614c7c6e244dc577b4cd3bb8)
 
 ## Description
+
 Delete a key from Redis, given key and connection uri to connect with Redis instance.
 
 ## Inputs
-#### **connectionUri**  *Text*
+
+#### **connectionUri** _Text_
+
 Connection uri for redis in format:
 
 redis://username:authpassword@127.0.0.1:6380/4?allowUsernameInURI=true
@@ -13,8 +17,9 @@ redis://username:authpassword@127.0.0.1:6380/4?allowUsernameInURI=true
 For compatibility reasons `allowUsernameInURI` need to be provided, otherwise the username part will be ignored.
 
 Make sure to whitelist Dcoder's ips to connect to redis instance: https://code.dcoder.tech/feed/article/6055aa0f646cc60a0c9ac65e/add-dcoder-ips-to-whitelist
-#### **key**  *Text*
+
+#### **key** _Text_
+
 Key to be deleted.
 
 ## Output
-

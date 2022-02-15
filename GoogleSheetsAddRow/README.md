@@ -1,18 +1,27 @@
 # Add a row to Google sheets
+
 [![Run On Dcoder](https://static-content.dcoder.tech/dcoder-assets/run-on-dcoder.svg)](https://code.dcoder.tech/feed/block/6050ec70f5264c77579ffef6)
 
 ## Description
+
 Add a row to Google sheets given the columns as an array.
 
 ## Inputs
-#### **sheetname**  *Text*
+
+#### **sheetname** _Text_
+
 Name of the sheet
-#### **sheetid**  *Text*
+
+#### **sheetid** _Text_
+
 sheetid
-#### **columns**  *JsonArray*
+
+#### **columns** _JsonArray_
+
 The row to be added as an array of column values. Use gui mode to create the array for columns.
 
 ## Output
-#### **result**  *null*
-data returned by the block
 
+#### **result** _null_
+
+data returned by the block

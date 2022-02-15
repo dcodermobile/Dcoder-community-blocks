@@ -2,7 +2,7 @@ id: GITHUB_GET_PROFILE
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: github
+  - name: github
 env: null
 inputs: []
 output:

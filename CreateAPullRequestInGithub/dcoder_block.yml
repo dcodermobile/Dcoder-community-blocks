@@ -2,39 +2,39 @@ id: GITHUB_CREATE_PR
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: github
+  - name: github
 env: null
 inputs:
-- name: reponame
-  type: Text
-  description: Name of the Github repo where you want to make PR.
-  required: true
-- name: owner
-  type: Text
-  description: Owner is the repo owner on Github, get it from url of your Github repo.
-  required: true
-- name: title
-  type: Text
-  description: Enter the title for PR.
-  required: false
-- name: body
-  type: Text
-  description: Enter the body for the PR.
-  required: false
-- name: head
-  type: Text
-  description: 'The name of the branch where your changes are implemented. For cross-repository
-    pull requests in the same network, namespace head with a user like this: username:branch  .'
-  required: true
-- name: base
-  type: Text
-  description: The name of the branch you want the changes pulled into. This should be an existing branch on the current repository. You cannot submit a pull request to one repository that requests a merge to a base of another repository.
-  required: true
-- name: draft
-  type: Boolean
-  default: false
-  description: Indicated whether the PR is in draft.
-  required: false
+  - name: reponame
+    type: Text
+    description: Name of the Github repo where you want to make PR.
+    required: true
+  - name: owner
+    type: Text
+    description: Owner is the repo owner on Github, get it from url of your Github repo.
+    required: true
+  - name: title
+    type: Text
+    description: Enter the title for PR.
+    required: false
+  - name: body
+    type: Text
+    description: Enter the body for the PR.
+    required: false
+  - name: head
+    type: Text
+    description: 'The name of the branch where your changes are implemented. For cross-repository
+      pull requests in the same network, namespace head with a user like this: username:branch  .'
+    required: true
+  - name: base
+    type: Text
+    description: The name of the branch you want the changes pulled into. This should be an existing branch on the current repository. You cannot submit a pull request to one repository that requests a merge to a base of another repository.
+    required: true
+  - name: draft
+    type: Boolean
+    default: false
+    description: Indicated whether the PR is in draft.
+    required: false
 output:
   name: updatedIssue
   description: Updated issue.

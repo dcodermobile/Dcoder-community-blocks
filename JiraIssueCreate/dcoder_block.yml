@@ -2,41 +2,41 @@ id: Get_ISSUES_JIRA
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: jira
+  - name: jira
 inputs:
-- name: sitename
-  type: Text
-  default: teamdcoder
-  description: Your jira site-name, as in https://site-name.atlassian.net
-  required: true
-- name: projectId
-  type: Text
-  description: Id or key of the project you want to add issues to.
-  required: true
-- name: summary
-  type: Text
-  description: Summary of the issue.
-  required: true
-- name: description
-  type: Text
-  description: Description of the issue.
-  required: true
-- name: issuetype
-  type: Text
-  default: Bug
-  description: 'Type of the issue. for ex: Bug or Feature, first letter should be
-    capital.'
-  required: false
-- name: priority
-  type: Text
-  default: Medium
-  description: Priority of the issue from Lowest, Low, Medium, High or Highest , default is Medium
-  required: false
-- name: assigneeId
-  type: Text
-  default:
-  description: Id of the user to assign the issue. (Get user id from users block)
-  required: false
+  - name: sitename
+    type: Text
+    default: teamdcoder
+    description: Your jira site-name, as in https://site-name.atlassian.net
+    required: true
+  - name: projectId
+    type: Text
+    description: Id or key of the project you want to add issues to.
+    required: true
+  - name: summary
+    type: Text
+    description: Summary of the issue.
+    required: true
+  - name: description
+    type: Text
+    description: Description of the issue.
+    required: true
+  - name: issuetype
+    type: Text
+    default: Bug
+    description: 'Type of the issue. for ex: Bug or Feature, first letter should be
+      capital.'
+    required: false
+  - name: priority
+    type: Text
+    default: Medium
+    description: Priority of the issue from Lowest, Low, Medium, High or Highest , default is Medium
+    required: false
+  - name: assigneeId
+    type: Text
+    default:
+    description: Id of the user to assign the issue. (Get user id from users block)
+    required: false
 output:
   name: issue
   description: Issue created on Jira.

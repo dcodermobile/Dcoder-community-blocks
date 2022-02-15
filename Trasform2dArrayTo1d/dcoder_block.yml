@@ -3,11 +3,11 @@ fileName: index.js
 runFunction: main
 auths: []
 inputs:
-- name: data
-  type: JsonArray
-  default: ${{ [${{ [4,5,6] }}, ${{ [7,6,8] }}] }}
-  description: 2d input array
-  required: true
+  - name: data
+    type: JsonArray
+    default: ${{ [${{ [4,5,6] }}, ${{ [7,6,8] }}] }}
+    description: 2d input array
+    required: true
 output:
   name: transformedArray
   description: Transformed Array Data

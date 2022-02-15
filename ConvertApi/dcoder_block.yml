@@ -4,36 +4,36 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: filepath
-  type: Text
-  default:
-  description: 'Full filepath to the file to be converted, ex : /tmp/abc.docx or an
-    https url to the file.'
-  required: true
-- name: from
-  type: Text
-  default:
-  description: |-
-    format of the input file can be: doc,pdf,png,ppt
+  - name: filepath
+    type: Text
+    default:
+    description: 'Full filepath to the file to be converted, ex : /tmp/abc.docx or an
+      https url to the file.'
+    required: true
+  - name: from
+    type: Text
+    default:
+    description: |-
+      format of the input file can be: doc,pdf,png,ppt
 
-    See convertapi.com for full list.
-  required: false
-- name: to
-  type: Text
-  default:
-  description: |-
-    format of the converted file, can be: doc,pdf,png,ppt
+      See convertapi.com for full list.
+    required: false
+  - name: to
+    type: Text
+    default:
+    description: |-
+      format of the converted file, can be: doc,pdf,png,ppt
 
-    See convertapi.com for full list.
-  required: true
-- name: secret_key
-  type: Text
-  description: Get secret_key from https://convertapi.com
-  required: true
-- name: outputFilesPath
-  type: Text
-  description: Full path to the directory where the converted files are to be saved.
-  required: false
+      See convertapi.com for full list.
+    required: true
+  - name: secret_key
+    type: Text
+    description: Get secret_key from https://convertapi.com
+    required: true
+  - name: outputFilesPath
+    type: Text
+    description: Full path to the directory where the converted files are to be saved.
+    required: false
 output:
   name: convertedFiles
   description: Converted files as an array of filepaths.

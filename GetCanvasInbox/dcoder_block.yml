@@ -4,19 +4,19 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: domain
-  type: Text
-  default: sit.instructure.com
-  description: Domain of your institute (ex. sit.instructure.com)
-  required: true
-- name: token
-  type: Text
-  description: "Follow these steps to get token from canvas\n1. Open Canvas (or go\
-    \ to https://{your-school-domain}\n2. Go to account -> settings (or go to 'https://{your-school-domain}/profile/settings')\n\
-    3. Scroll down till Approved Integration and click on '+ New Access Token'\n4.\
-    \ Write 'To use Canvas APIs' in purpose and hit Generate Token\n5. That's it.\
-    \ You will see your token. "
-  required: true
+  - name: domain
+    type: Text
+    default: sit.instructure.com
+    description: Domain of your institute (ex. sit.instructure.com)
+    required: true
+  - name: token
+    type: Text
+    description: "Follow these steps to get token from canvas\n1. Open Canvas (or go\
+      \ to https://{your-school-domain}\n2. Go to account -> settings (or go to 'https://{your-school-domain}/profile/settings')\n\
+      3. Scroll down till Approved Integration and click on '+ New Access Token'\n4.\
+      \ Write 'To use Canvas APIs' in purpose and hit Generate Token\n5. That's it.\
+      \ You will see your token. "
+    required: true
 output:
   name: inboxList
   description: It returns an array of all your canvas conversations (Inbox messages)

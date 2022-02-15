@@ -1,9 +1,7 @@
-const {
-  WebClient
-} = require('@slack/web-api')
+const { WebClient } = require('@slack/web-api')
 
 const main = async (inputs, secrets, auths, context) => {
-// Send to Slack
+  // Send to Slack
 
   let channel = inputs.channel
   let text = inputs.text
@@ -19,12 +17,13 @@ const main = async (inputs, secrets, auths, context) => {
       text,
       as_user: true
     })
-    console.log("Successfully sent.")
-    return true 
+    console.log('Successfully sent.')
+    return true
   } catch (e) {
-    
-    if (e.toString().indexOf("not_in_channel") > 0) {
-      console.log("Error:\nTo send messages, invite Dcoder app to you channel first by writing /invite @Dcoder")
+    if (e.toString().indexOf('not_in_channel') > 0) {
+      console.log(
+        'Error:\nTo send messages, invite Dcoder app to you channel first by writing /invite @Dcoder'
+      )
     } else {
       console.log(e)
     }

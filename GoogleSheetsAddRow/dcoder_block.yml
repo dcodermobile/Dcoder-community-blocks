@@ -2,25 +2,25 @@ id: ADD_A_ROW
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: googlesheets
+  - name: googlesheets
 env: null
 inputs:
-- name: sheetname
-  type: Text
-  default: Sheet1
-  description: Name of the sheet
-  required: true
-  subtype: One Line
-- name: sheetid
-  type: Text
-  default: ${{ secrets.SHEET_ID }}
-  description: sheetid
-  required: true
-- name: columns
-  type: JsonArray
-  default: ${{ [] }}
-  description: The row to be added as an array of column values. Use gui mode to create the array for columns.
-  required: true
+  - name: sheetname
+    type: Text
+    default: Sheet1
+    description: Name of the sheet
+    required: true
+    subtype: One Line
+  - name: sheetid
+    type: Text
+    default: ${{ secrets.SHEET_ID }}
+    description: sheetid
+    required: true
+  - name: columns
+    type: JsonArray
+    default: ${{ [] }}
+    description: The row to be added as an array of column values. Use gui mode to create the array for columns.
+    required: true
 output:
   name: result
   description: data returned by the block

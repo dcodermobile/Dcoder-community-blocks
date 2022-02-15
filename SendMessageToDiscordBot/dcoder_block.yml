@@ -4,19 +4,19 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: channelId
-  type: Text
-  default: ${{ secrets.CHANNEL_ID }}
-  description: Discord channel ID to send message
-  required: true
-- name: message
-  type: Text
-  description: Message to be sent on channel
-  required: true
-- name: token
-  type: Text
-  default: ${{ secrets.DISCORD_BOT_TOKEN }}
-  description: Discord bot token to send message.
-  required: true
+  - name: channelId
+    type: Text
+    default: ${{ secrets.CHANNEL_ID }}
+    description: Discord channel ID to send message
+    required: true
+  - name: message
+    type: Text
+    description: Message to be sent on channel
+    required: true
+  - name: token
+    type: Text
+    default: ${{ secrets.DISCORD_BOT_TOKEN }}
+    description: Discord bot token to send message.
+    required: true
 output:
   type:

@@ -1,3 +1,0 @@
-commands:
-- run: npm run build
-  default: true

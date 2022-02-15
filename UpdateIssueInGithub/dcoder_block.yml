@@ -2,28 +2,28 @@ id: GITHUB_UPDATE_ISSUE
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: github
+  - name: github
 inputs:
-- name: reponame
-  type: Text
-  description: Name of the Github repo that you want to add an issue into.
-  required: true
-- name: owner
-  type: Text
-  description: Owner is the repo owner on Github, get it from url of your Github repo.
-  required: true
-- name: issueNumber
-  type: Text
-  description: The issue to be updated, get issue number from url of the issue or from list issues block.
-  required: true
-- name: title
-  type: Text
-  description: Enter issue title
-  required: true
-- name: body
-  type: Text
-  description: Enter issue body.
-  required: true
+  - name: reponame
+    type: Text
+    description: Name of the Github repo that you want to add an issue into.
+    required: true
+  - name: owner
+    type: Text
+    description: Owner is the repo owner on Github, get it from url of your Github repo.
+    required: true
+  - name: issueNumber
+    type: Text
+    description: The issue to be updated, get issue number from url of the issue or from list issues block.
+    required: true
+  - name: title
+    type: Text
+    description: Enter issue title
+    required: true
+  - name: body
+    type: Text
+    description: Enter issue body.
+    required: true
 output:
   name: updatedIssue
   description: Updated issue.

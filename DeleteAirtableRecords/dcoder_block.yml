@@ -4,23 +4,23 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: ids
-  type: JsonArray
-  default: ${{ [] }}
-  description: ids of the records to be deleted as a JsonArray.
-  required: true
-- name: base_id
-  type: Text
-  description: Airtable base_id.
-  required: true
-- name: api_key
-  type: Text
-  description: Airtable api key.
-  required: true
-- name: table
-  type: Text
-  description: Airtable table id or table name.
-  required: true
+  - name: ids
+    type: JsonArray
+    default: ${{ [] }}
+    description: ids of the records to be deleted as a JsonArray.
+    required: true
+  - name: base_id
+    type: Text
+    description: Airtable base_id.
+    required: true
+  - name: api_key
+    type: Text
+    description: Airtable api key.
+    required: true
+  - name: table
+    type: Text
+    description: Airtable table id or table name.
+    required: true
 output:
   name: deletedRecords
   description: Deleted records from Airtable.

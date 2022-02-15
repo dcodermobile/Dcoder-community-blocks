@@ -2,33 +2,33 @@ id: Get_ISSUES_JIRA
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: jira
+  - name: jira
 env: null
 inputs:
-- name: sitename
-  type: Text
-  default:
-  description: Your jira site-name, as in https://site-name.atlassian.net
-  required: true
-- name: projectId
-  type: Text
-  default:
-  description: Id or key of the project you want to add issues to.
-  required: true
-- name: issueTitle
-  type: Text
-  description: Title of issue to be checked.
-  required: true
-- name: maxResults
-  type: Number
-  default: 100
-  description: Limit the number of issues to be returned.
-  required: true
-- name: jql
-  type: Text
-  description: 'Optionally provide jql for advance search options for Jira issues.
-    more here: https://support.atlassian.com/jira-service-management-cloud/docs/use-advanced-search-with-jira-query-language-jql/'
-  required: false
+  - name: sitename
+    type: Text
+    default:
+    description: Your jira site-name, as in https://site-name.atlassian.net
+    required: true
+  - name: projectId
+    type: Text
+    default:
+    description: Id or key of the project you want to add issues to.
+    required: true
+  - name: issueTitle
+    type: Text
+    description: Title of issue to be checked.
+    required: true
+  - name: maxResults
+    type: Number
+    default: 100
+    description: Limit the number of issues to be returned.
+    required: true
+  - name: jql
+    type: Text
+    description: 'Optionally provide jql for advance search options for Jira issues.
+      more here: https://support.atlassian.com/jira-service-management-cloud/docs/use-advanced-search-with-jira-query-language-jql/'
+    required: false
 output:
   name: issueExist
   description: true if issue exists else false

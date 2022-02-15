@@ -2,27 +2,27 @@ id: GOOGLE_SHEETS_GET_ROWS
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: googlesheets
+  - name: googlesheets
 env: null
 inputs:
-- name: spreadsheetId
-  type: Text
-  description: The ID of the spreadsheet to look in for value. The spreadsheetID can be found in the URL when viewing your Google sheet. E.g., https://docs.google.com/spreadsheets/d/[spreadsheetId]/edit#gid=0
-  required: true
-- name: sheet_name
-  type: Text
-  default: Sheet1
-  description: The A1 notation of the values to look in for value. E.g., A1:E5 or Sheet1!A1:E5
-  required: true
-- name: column_name
-  type: Text
-  description: 'The A1 notation column name to look in for value, for example: A or
-    B'
-  required: false
-- name: column_value
-  type: Text
-  description: The column value to look for.
-  required: false
+  - name: spreadsheetId
+    type: Text
+    description: The ID of the spreadsheet to look in for value. The spreadsheetID can be found in the URL when viewing your Google sheet. E.g., https://docs.google.com/spreadsheets/d/[spreadsheetId]/edit#gid=0
+    required: true
+  - name: sheet_name
+    type: Text
+    default: Sheet1
+    description: The A1 notation of the values to look in for value. E.g., A1:E5 or Sheet1!A1:E5
+    required: true
+  - name: column_name
+    type: Text
+    description: 'The A1 notation column name to look in for value, for example: A or
+      B'
+    required: false
+  - name: column_value
+    type: Text
+    description: The column value to look for.
+    required: false
 output:
   name: result
   description: Text response returned by block

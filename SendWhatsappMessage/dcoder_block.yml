@@ -3,34 +3,34 @@ fileName: dist/index.js
 runFunction: main
 auths: []
 inputs:
-- name: accountSid
-  type: Text
-  description: Your Twilio account sid. Get it from settings page of your project on Twilio.com
-  required: true
-- name: authToken
-  type: Text
-  description: Your Twilio auth token. Get it from settings page of your project on Twilio.com
-  required: true
-- name: from
-  type: Text
-  description: |-
-    from whatsapp number formated as
-    whatsapp:+12849264789
-  required: true
-- name: to
-  type: Text
-  description: |-
-    to whatsapp number formated as
-    whatsapp:+12849264789
-  required: true
-- name: message
-  type: Text
-  description: Message text.
-  required: true
-- name: mediaUrl
-  type: Text
-  description: Optional for attaching a media to the message.
-  required: false
+  - name: accountSid
+    type: Text
+    description: Your Twilio account sid. Get it from settings page of your project on Twilio.com
+    required: true
+  - name: authToken
+    type: Text
+    description: Your Twilio auth token. Get it from settings page of your project on Twilio.com
+    required: true
+  - name: from
+    type: Text
+    description: |-
+      from whatsapp number formated as
+      whatsapp:+12849264789
+    required: true
+  - name: to
+    type: Text
+    description: |-
+      to whatsapp number formated as
+      whatsapp:+12849264789
+    required: true
+  - name: message
+    type: Text
+    description: Message text.
+    required: true
+  - name: mediaUrl
+    type: Text
+    description: Optional for attaching a media to the message.
+    required: false
 output:
   name: messageId
   description: Returned message id.

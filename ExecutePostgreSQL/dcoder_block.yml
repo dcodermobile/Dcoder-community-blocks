@@ -4,26 +4,26 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: connectionURI
-  type: Text
-  default:
-  description: |-
-    The PostgreSQL server connection string uri to connect with the server in the format:
+  - name: connectionURI
+    type: Text
+    default:
+    description: |-
+      The PostgreSQL server connection string uri to connect with the server in the format:
 
-    postgresql://dbuser:secretpassword@database.server.com:3211/mydb
+      postgresql://dbuser:secretpassword@database.server.com:3211/mydb
 
-    Make sure to whitelist Dcoder's ips to connect to your db instance. Add Dcoder ips to Whitelist
-    https://code.dcoder.tech/feed/article/6055aa0f646cc60a0c9ac65e/add-dcoder-ips-to-whitelist
-  required: true
-- name: query
-  type: Text
-  description: PostgreSql query to be executed, can contain $1 $2 for parameters to be replaced.
-  required: true
-- name: parameters
-  type: JsonArray
-  default: ${{ [] }}
-  description: Optionally provide the value of parameters defined in query as $1, $2 etc as an array.
-  required: false
+      Make sure to whitelist Dcoder's ips to connect to your db instance. Add Dcoder ips to Whitelist
+      https://code.dcoder.tech/feed/article/6055aa0f646cc60a0c9ac65e/add-dcoder-ips-to-whitelist
+    required: true
+  - name: query
+    type: Text
+    description: PostgreSql query to be executed, can contain $1 $2 for parameters to be replaced.
+    required: true
+  - name: parameters
+    type: JsonArray
+    default: ${{ [] }}
+    description: Optionally provide the value of parameters defined in query as $1, $2 etc as an array.
+    required: false
 output:
   name: queryResult
   description: The output of the query can be accessed from queryResult.data, run the block once to get dynamic output suggestions.

@@ -4,13 +4,13 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: url
-  type: Text
-  description: |-
-    amazon.in url of the product to track. Make sure the url is from amazon.in. ex:  https://www.amazon.in/dp/B086KDZGT8/
+  - name: url
+    type: Text
+    description: |-
+      amazon.in url of the product to track. Make sure the url is from amazon.in. ex:  https://www.amazon.in/dp/B086KDZGT8/
 
-    the .de , .com etc amazon domains are not supported.
-  required: true
+      the .de , .com etc amazon domains are not supported.
+    required: true
 output:
   name: productDetails
   description: Product details in Json.

@@ -3,10 +3,10 @@ fileName: dist/index.js
 runFunction: main
 auths: []
 inputs:
-- name: inputDate
-  type: Text
-  description: Provide input date.
-  required: true
+  - name: inputDate
+    type: Text
+    description: Provide input date.
+    required: true
 output:
   name: convertedDate
   description: Converted date.

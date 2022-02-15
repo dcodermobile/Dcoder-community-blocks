@@ -2,25 +2,25 @@ id: UPLOAD_A_FILE_TO_GOOGLE_DRIVE
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: googledrive
+  - name: googledrive
 inputs:
-- name: filename
-  type: Text
-  description: Name of the file.
-  required: true
-- name: parents
-  type: JsonArray
-  default: ${{ [] }}
-  description: A list of parent folder IDs, entered manually or coming from list folder previous step.
-  required: true
-- name: filetype
-  type: Text
-  description: mime type of the file. for example application/pdf for filetype.
-  required: true
-- name: pathToFile
-  type: Text
-  description: Full path of the file.
-  required: true
+  - name: filename
+    type: Text
+    description: Name of the file.
+    required: true
+  - name: parents
+    type: JsonArray
+    default: ${{ [] }}
+    description: A list of parent folder IDs, entered manually or coming from list folder previous step.
+    required: true
+  - name: filetype
+    type: Text
+    description: mime type of the file. for example application/pdf for filetype.
+    required: true
+  - name: pathToFile
+    type: Text
+    description: Full path of the file.
+    required: true
 output:
   name: uploadResponse
   description: Upload response from Drive.

@@ -3,10 +3,10 @@ fileName: index.js
 runFunction: main
 auths: []
 inputs:
-- name: number
-  type: Text
-  description: Number to be converted to emojis
-  required: true
+  - name: number
+    type: Text
+    description: Number to be converted to emojis
+    required: true
 output:
   name: convertedNumber
   description: The converted number.

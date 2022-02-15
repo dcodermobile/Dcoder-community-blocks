@@ -1,12 +1,10 @@
 const main = async (inputs, auths, event) => {
-
-
   // To get block input
   const item = inputs.item
   const separator = inputs.separator
   const x = Array.from(new Set(item.split('|')))
   let out = ''
-  x.forEach(i => {
+  x.forEach((i) => {
     out += i + separator
   })
   if (out.indexOf(separator) > 0) {

@@ -4,10 +4,10 @@ runFunction: main
 auths: []
 env: null
 inputs:
-- name: keywords
-  type: Text
-  description: List of keywords for stories you want to get in a command separated way like Apple, devtools
-  required: false
+  - name: keywords
+    type: Text
+    description: List of keywords for stories you want to get in a command separated way like Apple, devtools
+    required: false
 output:
   name: newsItems
   description: Json array for news items.

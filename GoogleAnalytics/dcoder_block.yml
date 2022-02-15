@@ -2,60 +2,60 @@ id: GOOGLE_ANALYTICS
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: google_analytics
+  - name: google_analytics
 inputs:
-- name: viewId
-  type: Text
-  default:
-  description: Your Google Analytics viewId, this is not tracking id. Go to Analytics, select your property and go to admin setting for the property, there in view setting, you will see the view id.
-  required: true
-- name: metrics
-  type: Text
-  default: ga:pageviews
-  description: |-
-    comma separated metrics that you want to get as result, some example values can be:
-    ga:pageviews
-    ga:users
-    ga:sessions
-    ga:organicSearches
-    For a list of metrics and dimensions visit: https://ga-dev-tools.web.app/dimensions-metrics-explorer/
-  required: true
-- name: startDate
-  type: Text
-  default: 30daysAgo
-  description: Can be date in yyyy-mm-dd format or today, yesterday, 30daysAgo,7daysAgo
-  required: true
-- name: endDate
-  type: Text
-  default: today
-  description: Can be date in yyyy-mm-dd format or today, yesterday, 30daysAgo,7daysAgo
-  required: true
-- name: dimensions
-  type: Text
-  description: "comma separated dimensions as text, dimensions works along with metrics.\
-    \ example value \nga:date\nga:hour\nga:source\nFor a list of metrics and dimensions\
-    \ visit: https://ga-dev-tools.web.app/dimensions-metrics-explorer/"
-  required: false
-- name: sort
-  type: Text
-  description: |-
-    To sort the results, example value
-    -ga:date
-    or
-    ga:date
-  required: false
-- name: filters
-  type: Text
-  description: |-
-    filters for the result.ex values
-    ga:medium==organic
-    ga:browser==Chrome
-  required: false
-- name: maxResults
-  type: Number
-  default: 10000
-  description: max results to returned in output.
-  required: false
+  - name: viewId
+    type: Text
+    default:
+    description: Your Google Analytics viewId, this is not tracking id. Go to Analytics, select your property and go to admin setting for the property, there in view setting, you will see the view id.
+    required: true
+  - name: metrics
+    type: Text
+    default: ga:pageviews
+    description: |-
+      comma separated metrics that you want to get as result, some example values can be:
+      ga:pageviews
+      ga:users
+      ga:sessions
+      ga:organicSearches
+      For a list of metrics and dimensions visit: https://ga-dev-tools.web.app/dimensions-metrics-explorer/
+    required: true
+  - name: startDate
+    type: Text
+    default: 30daysAgo
+    description: Can be date in yyyy-mm-dd format or today, yesterday, 30daysAgo,7daysAgo
+    required: true
+  - name: endDate
+    type: Text
+    default: today
+    description: Can be date in yyyy-mm-dd format or today, yesterday, 30daysAgo,7daysAgo
+    required: true
+  - name: dimensions
+    type: Text
+    description: "comma separated dimensions as text, dimensions works along with metrics.\
+      \ example value \nga:date\nga:hour\nga:source\nFor a list of metrics and dimensions\
+      \ visit: https://ga-dev-tools.web.app/dimensions-metrics-explorer/"
+    required: false
+  - name: sort
+    type: Text
+    description: |-
+      To sort the results, example value
+      -ga:date
+      or
+      ga:date
+    required: false
+  - name: filters
+    type: Text
+    description: |-
+      filters for the result.ex values
+      ga:medium==organic
+      ga:browser==Chrome
+    required: false
+  - name: maxResults
+    type: Number
+    default: 10000
+    description: max results to returned in output.
+    required: false
 output:
   name: response
   description: api response of the http get call

@@ -2,155 +2,155 @@ id: UPDATE_A_GOOGLE_CALENDAR_EVENT
 fileName: dist/index.js
 runFunction: main
 auths:
-- name: google_calendar
+  - name: google_calendar
 env: null
 inputs:
-- name: calendarId
-  type: Text
-  description: The ID of the calendar to add the event to.
-  required: true
-  subtype: One Line
-- name: eventId
-  type: Text
-  description: Event's id to be updated.
-  required: true
-- name: start_dateTime
-  type: Text
-  description: The time, as a combined date-time value (formatted according to RFC3339). A time zone offset is required unless a time zone is explicitly specified in timeZone.
-  required: true
-- name: start_timeZone
-  type: Text
-  description: The time zone in which the time is specified. (Formatted as an IANA Time Zone Database name, e.g. "Europe/Zurich".)
-  required: true
-- name: end_dateTime
-  type: Text
-  description: The time, as a combined date-time value (formatted according to RFC3339). A time zone offset is required unless a time zone is explicitly specified in timeZone.
-  required: true
-- name: end_timeZone
-  type: Text
-  description: The time zone in which the time is specified. (Formatted as an IANA Time Zone Database name, e.g. "Europe/Zurich".)
-  required: true
-- name: conferenceDataVersion
-  type: Text
-  description: Version number of conference data supported by the API client. Version 0 assumes no conference data support and ignores conference data in the event's body. Version 1 enables support for copying of ConferenceData as well as for creating new conferences using the createRequest field of conferenceData. The default is 0. Acceptable values are 0 to 1, inclusive.
-  required: false
-- name: maxAttendees
-  type: Number
-  description: The maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned
-  required: false
-- name: sendNotifications
-  type: Boolean
-  default: false
-  description: Whether to send notifications about the creation of the event. Note that some emails might still be sent even if you set the value to false. The default is false.
-  required: false
-- name: sendUpdates
-  type: Text
-  description: |-
-    Guests who should receive notifications about the creation of the new event.
-    Acceptable values are:
-    "all": Notifications are sent to all guests.
-    "externalOnly": Notifications are sent to non-Google Calendar guests only.
-    "none": No notifications are sent. This value should only be used for migration use cases.
-  required: false
-- name: anyoneCanAddSelf
-  type: Boolean
-  default: false
-  description: Whether anyone can invite themselves to the event.
-  required: false
-- name: colorId
-  type: Number
-  description: "The color for the event.\n1\tLavender\n2\tSage\n3\tGrape\n4\tFlamingo\n\
-    5\tBanana\n6\tTangerine\n7\tPeacock\n8\tGraphite\n9\tBlueberry\n10\tBasil\n11\t\
-    Tomato"
-  required: false
-- name: summary
-  type: Text
-  description: Title of the event.
-  required: false
-- name: description
-  type: Text
-  description: Description of the event, can contain html.
-  required: false
-- name: recurrence
-  type: JsonArray
-  default: ${{ [] }}
-  description: List of RRULE, EXRULE, RDATE and EXDATE lines for a recurring event, as specified in RFC5545. Note that DTSTART and DTEND lines are not allowed in this field; event start and end times are specified in the start and end fields.
-  required: false
-- name: gadget_display
-  type: Text
-  description: |-
-    The gadget's display mode. Possible values are:
-    "icon" - The gadget displays next to the event's title in the calendar view.
-    "chip" - The gadget displays when the event is clicked.
-  required: false
-- name: gadget_height
-  type: Text
-  description: The gadget's height in pixels.
-  required: false
-- name: gadget_width
-  type: Text
-  description: The gadget's width in pixels.
-  required: false
-- name: gadget_iconLink
-  type: Text
-  description: https url for the gadget's icon.
-  required: false
-- name: gadget_link
-  type: Text
-  description: The gadget's url.
-  required: false
-- name: gadget_preferences
-  type: JsonObject
-  default: ${{ {} }}
-  description: Prefrences.
-  required: false
-- name: gadget_title
-  type: Text
-  description: The gadget's title
-  required: false
-- name: gadget_type
-  type: Text
-  description: The gadget's type.
-  required: false
-- name: guestsCanInviteOthers
-  type: Boolean
-  default: false
-  description: Whether attendees other than the organizer can invite others to the event.
-  required: false
-- name: guestsCanModify
-  type: Boolean
-  default: false
-  description: Whether guests can modify the event.
-  required: false
-- name: guestsCanSeeOtherGuests
-  type: Boolean
-  default: false
-  description: Whether guests can see other guests invited to the event.
-  required: false
-- name: sequence
-  type: Text
-  description: Sequence number as per iCalendar.
-  required: false
-- name: source_title
-  type: Text
-  description: The title of the source, for example a title of webpage or an email subject.
-  required: false
-- name: source_url
-  type: Text
-  description: http/https url of the source.
-  required: false
-- name: status
-  type: Text
-  description: Status of the event, can be "confirmed", "tentative" or "cancelled" only.
-  required: false
-- name: transparency
-  type: Text
-  description: Whether event should block time on calendar, can be either "opaque" for blocking or "transparent" for non blocking.
-  required: false
-- name: visibility
-  type: Text
-  description: Visibility of the event, can be one of "default", "public", "private" or "confidential".
-  required: false
+  - name: calendarId
+    type: Text
+    description: The ID of the calendar to add the event to.
+    required: true
+    subtype: One Line
+  - name: eventId
+    type: Text
+    description: Event's id to be updated.
+    required: true
+  - name: start_dateTime
+    type: Text
+    description: The time, as a combined date-time value (formatted according to RFC3339). A time zone offset is required unless a time zone is explicitly specified in timeZone.
+    required: true
+  - name: start_timeZone
+    type: Text
+    description: The time zone in which the time is specified. (Formatted as an IANA Time Zone Database name, e.g. "Europe/Zurich".)
+    required: true
+  - name: end_dateTime
+    type: Text
+    description: The time, as a combined date-time value (formatted according to RFC3339). A time zone offset is required unless a time zone is explicitly specified in timeZone.
+    required: true
+  - name: end_timeZone
+    type: Text
+    description: The time zone in which the time is specified. (Formatted as an IANA Time Zone Database name, e.g. "Europe/Zurich".)
+    required: true
+  - name: conferenceDataVersion
+    type: Text
+    description: Version number of conference data supported by the API client. Version 0 assumes no conference data support and ignores conference data in the event's body. Version 1 enables support for copying of ConferenceData as well as for creating new conferences using the createRequest field of conferenceData. The default is 0. Acceptable values are 0 to 1, inclusive.
+    required: false
+  - name: maxAttendees
+    type: Number
+    description: The maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned
+    required: false
+  - name: sendNotifications
+    type: Boolean
+    default: false
+    description: Whether to send notifications about the creation of the event. Note that some emails might still be sent even if you set the value to false. The default is false.
+    required: false
+  - name: sendUpdates
+    type: Text
+    description: |-
+      Guests who should receive notifications about the creation of the new event.
+      Acceptable values are:
+      "all": Notifications are sent to all guests.
+      "externalOnly": Notifications are sent to non-Google Calendar guests only.
+      "none": No notifications are sent. This value should only be used for migration use cases.
+    required: false
+  - name: anyoneCanAddSelf
+    type: Boolean
+    default: false
+    description: Whether anyone can invite themselves to the event.
+    required: false
+  - name: colorId
+    type: Number
+    description: "The color for the event.\n1\tLavender\n2\tSage\n3\tGrape\n4\tFlamingo\n\
+      5\tBanana\n6\tTangerine\n7\tPeacock\n8\tGraphite\n9\tBlueberry\n10\tBasil\n11\t\
+      Tomato"
+    required: false
+  - name: summary
+    type: Text
+    description: Title of the event.
+    required: false
+  - name: description
+    type: Text
+    description: Description of the event, can contain html.
+    required: false
+  - name: recurrence
+    type: JsonArray
+    default: ${{ [] }}
+    description: List of RRULE, EXRULE, RDATE and EXDATE lines for a recurring event, as specified in RFC5545. Note that DTSTART and DTEND lines are not allowed in this field; event start and end times are specified in the start and end fields.
+    required: false
+  - name: gadget_display
+    type: Text
+    description: |-
+      The gadget's display mode. Possible values are:
+      "icon" - The gadget displays next to the event's title in the calendar view.
+      "chip" - The gadget displays when the event is clicked.
+    required: false
+  - name: gadget_height
+    type: Text
+    description: The gadget's height in pixels.
+    required: false
+  - name: gadget_width
+    type: Text
+    description: The gadget's width in pixels.
+    required: false
+  - name: gadget_iconLink
+    type: Text
+    description: https url for the gadget's icon.
+    required: false
+  - name: gadget_link
+    type: Text
+    description: The gadget's url.
+    required: false
+  - name: gadget_preferences
+    type: JsonObject
+    default: ${{ {} }}
+    description: Prefrences.
+    required: false
+  - name: gadget_title
+    type: Text
+    description: The gadget's title
+    required: false
+  - name: gadget_type
+    type: Text
+    description: The gadget's type.
+    required: false
+  - name: guestsCanInviteOthers
+    type: Boolean
+    default: false
+    description: Whether attendees other than the organizer can invite others to the event.
+    required: false
+  - name: guestsCanModify
+    type: Boolean
+    default: false
+    description: Whether guests can modify the event.
+    required: false
+  - name: guestsCanSeeOtherGuests
+    type: Boolean
+    default: false
+    description: Whether guests can see other guests invited to the event.
+    required: false
+  - name: sequence
+    type: Text
+    description: Sequence number as per iCalendar.
+    required: false
+  - name: source_title
+    type: Text
+    description: The title of the source, for example a title of webpage or an email subject.
+    required: false
+  - name: source_url
+    type: Text
+    description: http/https url of the source.
+    required: false
+  - name: status
+    type: Text
+    description: Status of the event, can be "confirmed", "tentative" or "cancelled" only.
+    required: false
+  - name: transparency
+    type: Text
+    description: Whether event should block time on calendar, can be either "opaque" for blocking or "transparent" for non blocking.
+    required: false
+  - name: visibility
+    type: Text
+    description: Visibility of the event, can be one of "default", "public", "private" or "confidential".
+    required: false
 output:
   name: event
   description: The updated calendar event.

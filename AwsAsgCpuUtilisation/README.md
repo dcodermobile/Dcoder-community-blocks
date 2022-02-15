@@ -1,26 +1,43 @@
 # AWS Auto Scaling Group Cpu Utilisation
+
 [![Run On Dcoder](https://static-content.dcoder.tech/dcoder-assets/run-on-dcoder.svg)](https://code.dcoder.tech/feed/block/60ec3603b48887329206e4b3)
 
 ## Description
+
 This block will give you the cpu utilisation data for given auto scaling group.
 
 ## Inputs
-#### **autoScalingGroupName**  *Text*
+
+#### **autoScalingGroupName** _Text_
+
 Name of the auto scaling group
-#### **startTime**  *Text*
+
+#### **startTime** _Text_
+
 Specify the start range to fetch data.
-#### **endTime**  *Text*
+
+#### **endTime** _Text_
+
 End range to fetch the data.
-#### **interval**  *Number*
+
+#### **interval** _Number_
+
 interval size to fetch data.
-#### **region**  *Text*
+
+#### **region** _Text_
+
 region in which instance is hosted. for eg- ap-southeast-1
-#### **awsAccessKeyId**  *Text*
+
+#### **awsAccessKeyId** _Text_
+
 Aws access key id to authenticate.
-#### **awsSecretAccessKey**  *Text*
+
+#### **awsSecretAccessKey** _Text_
+
 Aws secret access key to authenticate
 
 ## Output
-#### **cpuUtilisationData**  *JsonObject*
-Cpu utilisation of instance
 
+#### **cpuUtilisationData** _JsonObject_
+
+Cpu utilisation of instance
