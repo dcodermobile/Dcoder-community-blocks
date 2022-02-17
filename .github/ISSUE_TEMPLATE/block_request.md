@@ -2,7 +2,7 @@
 name: Request a Dcoder block
 about: Request a new Dcoder block from the community.
 title: ''
-labels: ''
+labels: 'block request'
 assignees: ''
 ---
 
