@@ -11,6 +11,7 @@ make sure that you _read the whole guidelines_. If you have any doubt on the con
 ### Process
 
 - Make a fork of this repo in your account.
+- Make sure you have nodejs installed and then in the root of the project run `npm init`, this will setup pre commit hook to format the code with prettier.
 - Add a folder to add a new block inside the repo, you can create a block for any application or apis available. You can use this list for [ideas](https://github.com/dcodermobile/Dcoder-community-blocks/blob/main/Roadmap.md) on apps to create block.
 - Use [dcoder-cli](https://www.npmjs.com/package/@dcodermobile/dcoder-cli) to initialise a Dcoder block with base template, login from cli with `dcoder-cli login` and run `dcoder-cli block init`
 - At the moment editing exiting blocks is not allowed, you can create new blocks, test them and then raise a PR, only original creators should do a PR for exisitng block.
@@ -34,8 +35,11 @@ If you prefer our mobile editor than `dcoder-cli`, use this process to contribut
 
 - Create, run, test, build dist, turn off auto-install and publish your new block from our mobile app, all with GUI support. [Click to see tutorial on how to create a block](https://www.youtube.com/watch?v=zk24jlyDMb8)
 - Move to desktop, Make a fork of this repo in your account.
+- Make sure you have nodejs installed and then in the root of the project run `npm init`, this will setup pre commit hook to format the code with prettier.
 - Add an empty folder to add a new block inside the repo name it same as the blockname you gave on mobile in previous step.
 - cd into the new folder and Use [dcoder-cli](https://www.npmjs.com/package/@dcodermobile/dcoder-cli) to initialise this block with base template, login from cli with `dcoder-cli login` and run `dcoder-cli block init:existing`, and choose the code from other device i.e. your mobile, this will allow you to sync your block's code from mobile to desktop.
+- now run `dcoder-cli block readme` to generate readme for the block.
+- Run `docder-cli block sync` to sync your code again, release another version after adding readme with `dcoder-cli block version:create`
 - Once done, you can commit and make PR on original repo's main branch.
 
 ### Alternate process 3
