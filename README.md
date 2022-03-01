@@ -1,3 +1,6 @@
+
+[To get access to Dcoder's low code, apply here.](https://bit.ly/3K6MCo8)
+
 # Dcoder-community-blocks
 
 An open source program to contribute to Dcoder blocks, now anyone and everyone can take part in this open source revolution to help coding community by building blocks for Dcoder's low code editor.
@@ -24,4 +27,4 @@ To work with blocks on desktop, use our cli with your favorite editor.
 See our Contribution guidelines to learn more about how to create and test out a block and contribute to this repo.
 [Click to access Contribution Guidelines](https://github.com/dcodermobile/Dcoder-community-blocks/blob/main/CONTRIBUTING.md)
 
-[To get access to Dcoder's low code, apply here.](https://bit.ly/3CZqU2a)
+[To get access to Dcoder's low code, apply here.](https://bit.ly/3K6MCo8)
